@@ -1,0 +1,13 @@
+let three = app app (+) to 2 to 1 in
+let two = app app (-) to 5 to three in
+let six = app app (*) to three to two in
+let four = app app (/) to 24 to six in
+let true1 = app app (=) to four to app app (+) to two to two in
+let true2 = app app (<) to two to four in
+let true3 = app app (<=) to two to two in
+let true4 = app app (>) to six to four in
+let true5 = app app (>=) to six to six in
+let true6 = app app (&&) to true1 to true2 in
+let true7 = app app (&&) to true3 to true4 in
+let true9 = app app (||) to true6 to true7 in
+app app (||) to true9 to true5

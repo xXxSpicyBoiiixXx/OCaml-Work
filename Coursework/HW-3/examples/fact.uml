@@ -1,0 +1,13 @@
+let Z = fun f ->
+          app
+	    fun x -> app f to fun v -> app app x to x to v
+	  to
+	    fun x -> app f to fun v -> app app x to x to v
+in
+let fact' = fun fact -> fun n ->
+             if app app (<=) to n to 1 then 1
+	     else app app (*) to n to
+	           app fact to app app (-) to n to 1
+in
+let fact = app Z to fact' in
+app fact to 5

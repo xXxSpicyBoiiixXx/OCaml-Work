@@ -1,0 +1,8 @@
+vert 16 serif black "Figure 3. Notable non-computer scientists."
+  [ (bernie.jpg
+     caption right 16 serif black "(a) Bernie Sanders, the junior (yes, junior) US Senator from Vermont, wore colorful knitted mittens to President Biden's inauguration.")
+    (drakeyes.jpg
+     caption right 16 serif black "(b) Drake is a popular rapper from Toronto and seems pleased in this still frame from a music video.")
+    (drakeno.jpg
+     caption right 16 serif black "(c )Drake looks less pleased in this other still frame from the same music video.")
+  ]

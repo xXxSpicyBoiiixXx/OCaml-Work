@@ -1,0 +1,4 @@
+let x = fun x -> app (*) to x in
+  let y = fun y -> app x to y in
+    let z = app y to 2 in
+      app z to 3

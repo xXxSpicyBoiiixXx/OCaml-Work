@@ -1,0 +1,2 @@
+let f = fun x -> app x to x in
+  app f to f

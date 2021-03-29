@@ -1,0 +1,5 @@
+let max = fun x -> fun y -> if app app (>) to x to y then x else y
+in
+  let max12 = app app max to 1 to 2 in
+  let max43 = app app max to 4 to 3 in
+    app app (+) to max12 to max43

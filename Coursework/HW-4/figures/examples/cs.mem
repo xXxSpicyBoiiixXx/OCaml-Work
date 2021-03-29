@@ -1,0 +1,10 @@
+horiz 16 serif black "Figure 2. Famous computer scientists"
+  [ (lovelace.jpg
+     caption below 16 serif black "(a) Augusta Ada King, Countess of Lovelace, envisioned that a general computing machine could be programmed to accomplish tasks not directly encoded in the hardware, arguably inventing the idea of software.<br/ ><br/ ><br/ >")
+    (church.jpg
+     caption below 16 serif black "(b) Alonzo Church developed the lambda calculus, a simple mathematical formalism sufficient to represent any computation.<br/ ><br/ ><br/ ><br/ >")
+    (turing.jpeg
+     caption below 16 serif black "(c) Independently of Church, Turing developed an equivalent, and for some reason much more famous, model of computation, now known as the Turing Machine. He was instrumental in codebreaking during World War II and later made early contributions to Artificial Intelligence and Computational Biology.")
+    (hopper.jpg
+     caption below 16 serif black "(d) Rear Admiral Grace Murry Hopper was a computer programmer working for the US Naval Reserves during World War II. She led early efforts to develop compiled languages. This work eventually led to the COBOL language.<br/ ><br/ ><br/ >")
+  ]
