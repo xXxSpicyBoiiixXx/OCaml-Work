@@ -3,17 +3,83 @@
 
 (** Lists **)
 
+(*
+ * List Operations 
+ *
+ * module List: sig .. end 
+ *
+ * --- Some Operations ---
+ *
+ * val length : 'a list -> int 
+ *      Returns the length of the given list 
+ *
+ * val hd : 'a list -> 'a
+ *      Returns the first element of the given list. This rasies a failure "hd" if the list empty 
+ *
+ * val tl : 'a list -> 'a list 
+ *      Returns the given list without its first element. This raises a failure "tl" if the list is empty.
+ *
+ * val nth : 'a list -> int -> 'a 
+ *      Returns the nth element of the given list. The first element is at postion 0. 
+ *      Raises failure "nth" if the list is too too short. 
+ *      Raises invalid_argument "List.nth" if n is negative 
+ *
+ * val rev : 'a list -> 'a list 
+ *      Reverses the list 
+ *
+ * val append : 'a list -> 'a list -> 'a list 
+ *      Cantenat two lists. 
+ *
+ *      COME BACK TO FOR OPERATION NOTES  
+ *)
+
+(*
+ * assert
+ *
+ * This built in function takes an expression as an argument and throws an
+ * excpetion if the provided expression evalutes to false. This is usually used 
+ * for debugging and testing e.g. 
+ *
+ * assert e 
+ *
+ * this will trigger an exeption if e evaluates to false, will do nothing if e 
+ * evaluates to true.
+ *
+ *
+ *)
+
 (***********************************************************************)
+
+(*
+ * This function << stutter: int -> 'a -> 'a list: >> 
+ * So the call << stutter n x >> should result in a list 
+ * with x repeted n times, e.g. 
+ *
+ * For all x, stutter 0 x = [] 
+ * stutter 2 5 = [5; 5]
+ * stutter 3 "yadda" = ["yadda"; "yadda"; "yadda"]
+ *)
 
 let rec stutter n x = 
         if n <= 0 then []
         else x::(stutter (n - 1) x)
 
+(***Testing***)
 let _= assert (stutter 0 5 = []);; 
 let _= assert (stutter 1 5 = [5]);;
 let _= assert (stutter 3 3 = [3; 3; 3]);;
 
 (***********************************************************************)
+
+(*
+ * This function << filter : ('a -> bool) -> 'a list -> 'a list >> 
+ * So the call << filter f l >> should result "l" wiht all and only 
+ * the items for which "f" returns true; These elements should appear in the 
+ * same order in which the appear in the orginal list. 
+ *
+ * filter (fun x -> x > 2) [5; 3; 1; 2; 4] = [5; 3; 4] 
+ * filter (fun x -> x > 5) = [] 
+ *)
 
 let rec filter f l = 
         match l with 
@@ -21,6 +87,7 @@ let rec filter f l =
         | h::t -> if f h then h::(filter f t) else filter f t 
 ;;
 
+(***Testing***)
 assert (filter ((<) 5) [1;7;2;0;9] = [7;9]);;
 assert (filter ((<) 10) [1;7;2;0;9] = []);;
 assert (filter ((<) 15) [1;17;2;0;8] = [17]);;
@@ -28,12 +95,24 @@ assert (filter (fun _ -> true) [] =[]);;
 
 (***********************************************************************)
 
+(*
+ * The function << find: ('a -> bool) -> 'a list -> 'a option >> 
+ * this will take some aguments as filter. If x is the first element in 
+ * the list for which f x = true, the find should return Some x. If 
+ * there is no such element, it should return None 
+ *
+ * find (fun x -> x > 2) [5; 3; 1; 2; 4] = Some 5 
+ * find (fun x -> x < 3) [5; 3; 1; 2; 4] = Some 1 
+ * find (fun x -> x > 5) [5; 3; 1; 2; 4] = None 
+ *)
+
 let rec find f l = 
         match l with 
         | [] -> None 
         | h::t -> if f h then Some h else find f t 
 ;;
 
+(***Testing***)
 assert (find ((<) 5) [1;7;2;0;9] = Some 7);; 
 assert (find ((<) 10) [1;7;2;0;9] = None);;
 assert (find ((<) 10) [1;17;2;0;8] = Some 17);; 
