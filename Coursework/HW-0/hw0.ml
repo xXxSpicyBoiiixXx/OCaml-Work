@@ -120,6 +120,14 @@ assert (find (fun _ -> true) [] = None);;
 
 (***********************************************************************)
 
+(*
+ * The below function makes sure that your parenthese match. 
+ * Here, we wrote a function parens that makes a list of 
+ * characters inccluding open parens '(' and close parens ')'. 
+ *
+ * here we will use a recursive helper function that scans the list 
+ * left to right and tracks addtional information.  
+ *)
 let parens l = 
         let rec parens_rec l opened = 
                 match l with 
@@ -131,6 +139,7 @@ let parens l =
              parens_rec l 0
 ;;
 
+(***Testing***)
 assert (parens [] = true);;
 assert (parens ['('; ')'] = true);;
 assert (parens ['('] = false);; 
@@ -142,6 +151,20 @@ assert (parens ['('; '('; ')'; '('; ')'; ')'] = true);;
 assert (parens ['('; '('; ')'; '('; ')'] = false);;
 
 (***********************************************************************)
+
+(*
+ * This find function finds items occuring in a list. It also find and item
+ * in a list of list, represting a 2D array of characters. 
+ * 
+ * Both rows and columns should be indexed from 0. When determining which 
+ * item is "first: We move from left to right within each row, then move 
+ * to the next row, then move to the next row (just like reading). 
+ * 
+ * find2D ((=) 5 file = Some (0, 4) because the first 5 appears in row 0
+ * at character 4 
+ * 
+ * find2D ((=) 15 file = None because 15 does not appear in the file 
+ *)
 
 let find2D f lines = 
         let rec find_line line (r, c) = 
@@ -161,9 +184,11 @@ let find2D f lines =
         find2D_rec lines 0
 ;;
 
+(***Testing***)
 assert (find2D (fun _ -> true) [] = None);;
 assert (find2D (fun _ -> true) [[]; []] = None);;
 
+(***Test File***) 
 let file = 
         [[1;2;3;4;5];
          [5;4;3;2;1];
@@ -171,6 +196,7 @@ let file =
          [2;4;6;8;10;12]]
 ;;
 
+(***Testing***)
 assert (find2D ((=) 5) file = Some(0,4));;
 assert (find2D ((<) 5) file = Some(2,0));;
 assert (find2D ((<) 10) file = Some(3,5));;
