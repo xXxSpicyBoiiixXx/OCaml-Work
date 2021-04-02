@@ -1,10 +1,8 @@
-(*** IIT CS 440, Spring 2021 ***)
-(*** Homework 1 ***)
+(*** Md Ali ***) 
+(*** trees.ml ***)
 
 exception ImplementMe
 ;;
-
-(** Trees **)
 
 type 'a tree = Leaf | Node of 'a * 'a tree * 'a tree
 ;;
@@ -14,14 +12,11 @@ let rec tree_fold (t: 'a tree) (u: 'b) (f: 'a -> 'b -> 'b -> 'b) =
   | Leaf -> u
   | Node (v, l, r) -> f v (tree_fold l u f) (tree_fold r u f)
 
-(*>* Problem 2.1 *>*)
 let tree_map (t: 'a tree) (f: 'a -> 'b) : 'b tree =
-  raise ImplementMe
+  tree_fold t Leaf (fun v l r -> Node (f v, l, r)) 
 
-(*>* Problem 2.2 *>*)
 let inorder (t: 'a tree) : 'a list =
-  raise ImplementMe
+  tree_fold t [] (fun v l r -> l @ [v] @ r)
 
-(*>* Problem 2.3 *>*)
 let preorder (t: 'a tree) : 'a list =
-  raise ImplementMe                                               
+                         
