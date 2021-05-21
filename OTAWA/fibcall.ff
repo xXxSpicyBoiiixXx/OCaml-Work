@@ -1,0 +1,4 @@
+checksum "fibcall" 0x86c6f217;
+
+// Function fib 
+loop 0x0005013c 29;
