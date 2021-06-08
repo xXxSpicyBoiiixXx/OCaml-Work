@@ -1,2 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<flowfacts>
+  <function name="camlAppend__append_1010">
+    <no-call address="0x2a1a8" name="caml_call_gc" />
+    <control-constraint><le><count id="block-1"/><const int="2"/></le></control-constraint>
+    <control-constraint><le><count id="block-2"/><const int="1"/></le></control-constraint>
+    <control-constraint><le><count id="block-3"/><const int="1"/></le></control-constraint>
+    <control-constraint><le><count id="block-4"/><const int="1"/></le></control-constraint>
+    <control-constraint><le><count id="block-5"/><const int="1"/></le></control-constraint>
+    <control-constraint><le><count id="block-6"/><const int="1"/></le></control-constraint>
+    <control-constraint><le><count id="block-7" address="0x10804"/><const int="0"/></le></control-constraint>
+    <conditional>
+      <condition address="0x107ce">
+      </condition>
+	<case cond="1" executed="false"></case>
+	<case cond="0" executed="false"></case>
 
+    </conditional>
+    <call address="0x10804" executed="false"></call>
+  </function>
+  <function name="caml_call_gc" executed="false">
+  </function>
+  <ignore-entry name="caml_call_gc" />
+</flowfacts>
 
