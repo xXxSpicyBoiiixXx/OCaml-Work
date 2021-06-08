@@ -1,0 +1,751 @@
+=== created by sis-install.py V1.0 (2021-06-08 09:02:41.340255) ===
+
+cflags = -I/usr/include/libxml2
+ldflags = -lxml2 -lz -llzma -licui18n -licuuc -licudata -lm -ldl
+running /usr/bin/cc /tmp/tmpGLIOoi.c -o /tmp/tmpNdlhue -I/usr/include/libxml2 -lxml2 -lz -llzma -licui18n -licuuc -licudata -lm -ldl
+cflags = -I/usr/include/libxml2
+ldflags = -lxslt -lxml2 -lm
+running /usr/bin/cc /tmp/tmpHSK9Pa.c -o /tmp/tmpjTFH3G -I/usr/include/libxml2 -lxslt -lxml2 -lm
+
+Dowloading elm: git clone https://git.renater.fr/anonscm/git/elm/elm.git /tmp/tmpLtrW0Y-sis/elmCloning into '/tmp/tmpLtrW0Y-sis/elm'...
+
+Setting up elm: cmake . -DCMAKE_INSTALL_PREFIX='/home/mali54/OCaml-Work/OTAWA/ex-computation'
+-- The C compiler identification is GNU 10.2.0
+-- The CXX compiler identification is GNU 10.2.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- ELM_STAT disabled
+-- SET_PTRACER = no
+-- Found LibXml2: /usr/lib/libxml2.so (found suitable version "2.9.10", minimum required is "0") 
+-- Found LibXslt: /usr/lib/libxslt.so (found suitable version "1.1.34", minimum required is "0") 
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- GDB_PATH = GDB_PATH-NOTFOUND
+-- crash handler is CrashHandler::DEFAULT
+-- link with -lpthread
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /tmp/tmpLtrW0Y-sis/elm
+
+Building elm: make
+[  0%] Building CXX object src/CMakeFiles/elm.dir/alloc_BlockAllocator.cpp.o
+[  1%] Building CXX object src/CMakeFiles/elm.dir/alloc_BlockAllocatorWithGC.cpp.o
+[  2%] Building CXX object src/CMakeFiles/elm.dir/alloc_DefaultAllocator.cpp.o
+[  3%] Building CXX object src/CMakeFiles/elm.dir/alloc_SimpleGC.cpp.o
+[  3%] Building CXX object src/CMakeFiles/elm.dir/alloc_GroupedGC.cpp.o
+[  4%] Building CXX object src/CMakeFiles/elm.dir/alloc_StackAllocator.cpp.o
+[  5%] Building CXX object src/CMakeFiles/elm.dir/avl_GenTree.cpp.o
+[  6%] Building CXX object src/CMakeFiles/elm.dir/avl_Tree.cpp.o
+[  6%] Building CXX object src/CMakeFiles/elm.dir/block_DynBlock.cpp.o
+[  7%] Building CXX object src/CMakeFiles/elm.dir/checksum_Fletcher.cpp.o
+[  8%] Building CXX object src/CMakeFiles/elm.dir/checksum_MD5.cpp.o
+[  9%] Building CXX object src/CMakeFiles/elm.dir/data_Array.cpp.o
+[  9%] Building CXX object src/CMakeFiles/elm.dir/data_ArrayList.cpp.o
+[ 10%] Building CXX object src/CMakeFiles/elm.dir/data_BiDiList.cpp.o
+[ 11%] Building CXX object src/CMakeFiles/elm.dir/data_HashTable.cpp.o
+[ 12%] Building CXX object src/CMakeFiles/elm.dir/data_FragTable.cpp.o
+[ 12%] Building CXX object src/CMakeFiles/elm.dir/data_List.cpp.o
+[ 13%] Building CXX object src/CMakeFiles/elm.dir/data_ListQueue.cpp.o
+[ 14%] Building CXX object src/CMakeFiles/elm.dir/data_Range.cpp.o
+[ 15%] Building CXX object src/CMakeFiles/elm.dir/data_SortedList.cpp.o
+[ 16%] Building CXX object src/CMakeFiles/elm.dir/data_StaticStack.cpp.o
+[ 16%] Building CXX object src/CMakeFiles/elm.dir/data_Tree.cpp.o
+[ 17%] Building CXX object src/CMakeFiles/elm.dir/data_TreeBag.cpp.o
+[ 18%] Building CXX object src/CMakeFiles/elm.dir/data_Vector.cpp.o
+[ 19%] Building CXX object src/CMakeFiles/elm.dir/debug.cpp.o
+[ 19%] Building CXX object src/CMakeFiles/elm.dir/dyndata_Collection.cpp.o
+[ 20%] Building CXX object src/CMakeFiles/elm.dir/imm_list.cpp.o
+[ 21%] Building CXX object src/CMakeFiles/elm.dir/inhstruct_BinTree.cpp.o
+[ 22%] Building CXX object src/CMakeFiles/elm.dir/inhstruct_SortedBinTree.cpp.o
+[ 22%] Building CXX object src/CMakeFiles/elm.dir/inhstruct_DLList.cpp.o
+[ 23%] Building CXX object src/CMakeFiles/elm.dir/inhstruct_SLList.cpp.o
+[ 24%] Building CXX object src/CMakeFiles/elm.dir/inhstruct_Tree.cpp.o
+[ 25%] Building CXX object src/CMakeFiles/elm.dir/ini.cpp.o
+[ 25%] Building CXX object src/CMakeFiles/elm.dir/int.cpp.o
+[ 26%] Building CXX object src/CMakeFiles/elm.dir/io_ansi.cpp.o
+[ 27%] Building CXX object src/CMakeFiles/elm.dir/io_BlockInStream.cpp.o
+[ 28%] Building CXX object src/CMakeFiles/elm.dir/io_BlockOutStream.cpp.o
+[ 29%] Building CXX object src/CMakeFiles/elm.dir/io_BufferedInStream.cpp.o
+[ 29%] Building CXX object src/CMakeFiles/elm.dir/io_BufferedOutStream.cpp.o
+[ 30%] Building CXX object src/CMakeFiles/elm.dir/io_InFileStream.cpp.o
+[ 31%] Building CXX object src/CMakeFiles/elm.dir/io_Input.cpp.o
+[ 32%] Building CXX object src/CMakeFiles/elm.dir/io_InStream.cpp.o
+[ 32%] Building CXX object src/CMakeFiles/elm.dir/io_IOException.cpp.o
+[ 33%] Building CXX object src/CMakeFiles/elm.dir/io_Monitor.cpp.o
+[ 34%] Building CXX object src/CMakeFiles/elm.dir/io_OutFileStream.cpp.o
+[ 35%] Building CXX object src/CMakeFiles/elm.dir/io_Output.cpp.o
+[ 35%] Building CXX object src/CMakeFiles/elm.dir/io_OutStream.cpp.o
+[ 36%] Building CXX object src/CMakeFiles/elm.dir/io_RandomAccessStream.cpp.o
+[ 37%] Building CXX object src/CMakeFiles/elm.dir/io_StreamPipe.cpp.o
+[ 38%] Building CXX object src/CMakeFiles/elm.dir/io_TeeOutStream.cpp.o
+[ 38%] Building CXX object src/CMakeFiles/elm.dir/io_UnixInStream.cpp.o
+[ 39%] Building CXX object src/CMakeFiles/elm.dir/io_UnixOutStream.cpp.o
+[ 40%] Building CXX object src/CMakeFiles/elm.dir/io_VarExpander.cpp.o
+[ 41%] Building CXX object src/CMakeFiles/elm.dir/Iterator.cpp.o
+[ 41%] Building CXX object src/CMakeFiles/elm.dir/json.cpp.o
+[ 42%] Building CXX object src/CMakeFiles/elm.dir/json_Parser.cpp.o
+[ 43%] Building CXX object src/CMakeFiles/elm.dir/log_Log.cpp.o
+[ 44%] Building CXX object src/CMakeFiles/elm.dir/option_Option.cpp.o
+[ 45%] Building CXX object src/CMakeFiles/elm.dir/option_EnumOption.cpp.o
+[ 45%] Building CXX object src/CMakeFiles/elm.dir/option_ListOption.cpp.o
+[ 46%] Building CXX object src/CMakeFiles/elm.dir/option_Manager.cpp.o
+[ 47%] Building CXX object src/CMakeFiles/elm.dir/option_StringList.cpp.o
+[ 48%] Building CXX object src/CMakeFiles/elm.dir/option_SwitchOption.cpp.o
+[ 48%] Building CXX object src/CMakeFiles/elm.dir/option_ValueOption.cpp.o
+[ 49%] Building CXX object src/CMakeFiles/elm.dir/rtti.cpp.o
+[ 50%] Building CXX object src/CMakeFiles/elm.dir/serial2_serial.cpp.o
+[ 51%] Building CXX object src/CMakeFiles/elm.dir/serial2_TextSerializer.cpp.o
+[ 51%] Building CXX object src/CMakeFiles/elm.dir/stree_Tree.cpp.o
+[ 52%] Building CXX object src/CMakeFiles/elm.dir/string_AutoString.cpp.o
+[ 53%] Building CXX object src/CMakeFiles/elm.dir/string_Char.cpp.o
+[ 54%] Building CXX object src/CMakeFiles/elm.dir/string_String.cpp.o
+[ 54%] Building CXX object src/CMakeFiles/elm.dir/string_StringBuffer.cpp.o
+[ 55%] Building CXX object src/CMakeFiles/elm.dir/string_utf8.cpp.o
+[ 56%] Building CXX object src/CMakeFiles/elm.dir/string_utf16.cpp.o
+[ 57%] Building CXX object src/CMakeFiles/elm.dir/system_File.cpp.o
+[ 58%] Building CXX object src/CMakeFiles/elm.dir/system_FileItem.cpp.o
+[ 58%] Building CXX object src/CMakeFiles/elm.dir/system_Directory.cpp.o
+[ 59%] Building CXX object src/CMakeFiles/elm.dir/system_Path.cpp.o
+[ 60%] Building CXX object src/CMakeFiles/elm.dir/system_Plugin.cpp.o
+[ 61%] Building CXX object src/CMakeFiles/elm.dir/system_Plugger.cpp.o
+[ 61%] Building CXX object src/CMakeFiles/elm.dir/system_Process.cpp.o
+[ 62%] Building CXX object src/CMakeFiles/elm.dir/system_ProcessBuilder.cpp.o
+[ 63%] Building CXX object src/CMakeFiles/elm.dir/system_StopWatch.cpp.o
+[ 64%] Building CXX object src/CMakeFiles/elm.dir/system_System.cpp.o
+[ 64%] Building CXX object src/CMakeFiles/elm.dir/system_SystemException.cpp.o
+[ 65%] Building CXX object src/CMakeFiles/elm.dir/system_SystemIO.cpp.o
+[ 66%] Building CXX object src/CMakeFiles/elm.dir/util_BitVector.cpp.o
+[ 67%] Building CXX object src/CMakeFiles/elm.dir/util_Buffer.cpp.o
+[ 67%] Building CXX object src/CMakeFiles/elm.dir/util_Cleaner.cpp.o
+[ 68%] Building CXX object src/CMakeFiles/elm.dir/util_Comparator.cpp.o
+[ 69%] Building CXX object src/CMakeFiles/elm.dir/util_Equiv.cpp.o
+[ 70%] Building CXX object src/CMakeFiles/elm.dir/util_ErrorHandler.cpp.o
+[ 70%] Building CXX object src/CMakeFiles/elm.dir/util_Formatter.cpp.o
+[ 71%] Building CXX object src/CMakeFiles/elm.dir/util_HashKey.cpp.o
+[ 72%] Building CXX object src/CMakeFiles/elm.dir/util_Initializer.cpp.o
+[ 73%] Building CXX object src/CMakeFiles/elm.dir/util_MessageException.cpp.o
+[ 74%] Building CXX object src/CMakeFiles/elm.dir/util_Option.cpp.o
+[ 74%] Building CXX object src/CMakeFiles/elm.dir/util_Pair.cpp.o
+[ 75%] Building CXX object src/CMakeFiles/elm.dir/util_Ref.cpp.o
+[ 76%] Building CXX object src/CMakeFiles/elm.dir/util_strong_type.cpp.o
+[ 77%] Building CXX object src/CMakeFiles/elm.dir/util_test.cpp.o
+[ 77%] Building CXX object src/CMakeFiles/elm.dir/util_VarArg.cpp.o
+[ 78%] Building CXX object src/CMakeFiles/elm.dir/util_Version.cpp.o
+[ 79%] Building CXX object src/CMakeFiles/elm.dir/util_WAHVector.cpp.o
+[ 80%] Building CXX object src/CMakeFiles/elm.dir/utility.cpp.o
+[ 80%] Building CXX object src/CMakeFiles/elm.dir/type_info.cpp.o
+[ 81%] Building CXX object src/CMakeFiles/elm.dir/debug_CrashHandler.cpp.o
+[ 82%] Building CXX object src/CMakeFiles/elm.dir/system_Thread.cpp.o
+[ 83%] Building CXX object src/CMakeFiles/elm.dir/sys_JobScheduler.cpp.o
+[ 83%] Building CXX object src/CMakeFiles/elm.dir/net_ClientSocket.cpp.o
+[ 84%] Building CXX object src/CMakeFiles/elm.dir/net_ServerSocket.cpp.o
+[ 85%] Building CXX object src/CMakeFiles/elm.dir/serial2_XOMUnserializer.cpp.o
+[ 86%] Building CXX object src/CMakeFiles/elm.dir/serial2_XOMSerializer.cpp.o
+[ 87%] Building CXX object src/CMakeFiles/elm.dir/xom_Attribute.cpp.o
+[ 87%] Building CXX object src/CMakeFiles/elm.dir/xom_Builder.cpp.o
+[ 88%] Building CXX object src/CMakeFiles/elm.dir/xom_Comment.cpp.o
+[ 89%] Building CXX object src/CMakeFiles/elm.dir/xom_Document.cpp.o
+[ 90%] Building CXX object src/CMakeFiles/elm.dir/xom_Element.cpp.o
+[ 90%] Building CXX object src/CMakeFiles/elm.dir/xom_Elements.cpp.o
+[ 91%] Building CXX object src/CMakeFiles/elm.dir/xom_Exception.cpp.o
+[ 92%] Building CXX object src/CMakeFiles/elm.dir/xom_Node.cpp.o
+[ 93%] Building CXX object src/CMakeFiles/elm.dir/xom_NodeFactory.cpp.o
+[ 93%] Building CXX object src/CMakeFiles/elm.dir/xom_ParentNode.cpp.o
+[ 94%] Building CXX object src/CMakeFiles/elm.dir/xom_Serializer.cpp.o
+[ 95%] Building CXX object src/CMakeFiles/elm.dir/xom_String.cpp.o
+[ 96%] Building CXX object src/CMakeFiles/elm.dir/xom_Text.cpp.o
+[ 96%] Building CXX object src/CMakeFiles/elm.dir/xom_XIncluder.cpp.o
+[ 97%] Building CXX object src/CMakeFiles/elm.dir/xom_XSLTransform.cpp.o
+[ 98%] Linking CXX shared library libelm.so
+[ 98%] Built target elm
+[ 99%] Building CXX object tools/CMakeFiles/elm-plugin.dir/elm-plugin.cpp.o
+[100%] Linking CXX executable elm-plugin
+[100%] Built target elm-plugin
+
+Installing elm: make install
+
+Dowloading gel: git clone https://git.renater.fr/anonscm/git/otawa/gel.git /tmp/tmpLtrW0Y-sis/gelCloning into '/tmp/tmpLtrW0Y-sis/gel'...
+
+Setting up gel: cmake . -DCMAKE_INSTALL_PREFIX='/home/mali54/OCaml-Work/OTAWA/ex-computation'
+CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+-- The C compiler identification is GNU 10.2.0
+-- The CXX compiler identification is GNU 10.2.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /tmp/tmpLtrW0Y-sis/gel
+
+Building gel: make
+[  1%] Building C object src/CMakeFiles/gel.dir/block.c.o
+[  2%] Building C object src/CMakeFiles/gel.dir/dwarf_line.c.o
+[  4%] Building C object src/CMakeFiles/gel.dir/debug_line.c.o
+[  5%] Building C object src/CMakeFiles/gel.dir/stabs.c.o
+[  7%] Building C object src/CMakeFiles/gel.dir/file.c.o
+[  8%] Building C object src/CMakeFiles/gel.dir/gel_base.c.o
+[  9%] Building C object src/CMakeFiles/gel.dir/gel_error.c.o
+[ 11%] Building C object src/CMakeFiles/gel.dir/gel_cursor.c.o
+[ 12%] Building C object src/CMakeFiles/gel.dir/gel_infos.c.o
+[ 14%] Building C object src/CMakeFiles/gel.dir/gel_load.c.o
+[ 15%] Building C object src/CMakeFiles/gel.dir/gel_memory.c.o
+[ 16%] Building C object src/CMakeFiles/gel.dir/gel_mem.c.o
+[ 18%] Building C object src/CMakeFiles/gel.dir/image.c.o
+[ 19%] Building C object src/CMakeFiles/gel.dir/prog.c.o
+[ 21%] Building C object src/CMakeFiles/gel.dir/sect.c.o
+[ 22%] Building C object src/CMakeFiles/gel.dir/sym.c.o
+[ 23%] Building C object src/CMakeFiles/gel.dir/util.c.o
+[ 25%] Building C object src/CMakeFiles/gel.dir/plugsys0.c.o
+[ 26%] Building C object src/CMakeFiles/gel.dir/plugarch0.c.o
+[ 28%] Building C object src/CMakeFiles/gel.dir/gel_shared.c.o
+[ 29%] Linking C shared library libgel.so
+[ 29%] Built target gel
+[ 30%] Building C object src/CMakeFiles/gel_arch_40.dir/plugarch40.c.o
+[ 32%] Linking C shared module libgel_arch_40.so
+[ 32%] Built target gel_arch_40
+[ 33%] Building C object src/CMakeFiles/gel_arch_20.dir/plugarch20.c.o
+[ 35%] Linking C shared module libgel_arch_20.so
+[ 35%] Built target gel_arch_20
+[ 36%] Building C object src/CMakeFiles/gel_ppc.dir/block.c.o
+[ 38%] Building C object src/CMakeFiles/gel_ppc.dir/dwarf_line.c.o
+[ 39%] Building C object src/CMakeFiles/gel_ppc.dir/debug_line.c.o
+[ 40%] Building C object src/CMakeFiles/gel_ppc.dir/stabs.c.o
+[ 42%] Building C object src/CMakeFiles/gel_ppc.dir/file.c.o
+[ 43%] Building C object src/CMakeFiles/gel_ppc.dir/gel_base.c.o
+[ 45%] Building C object src/CMakeFiles/gel_ppc.dir/gel_error.c.o
+[ 46%] Building C object src/CMakeFiles/gel_ppc.dir/gel_cursor.c.o
+[ 47%] Building C object src/CMakeFiles/gel_ppc.dir/gel_infos.c.o
+[ 49%] Building C object src/CMakeFiles/gel_ppc.dir/gel_load.c.o
+[ 50%] Building C object src/CMakeFiles/gel_ppc.dir/gel_memory.c.o
+[ 52%] Building C object src/CMakeFiles/gel_ppc.dir/gel_mem.c.o
+[ 53%] Building C object src/CMakeFiles/gel_ppc.dir/image.c.o
+[ 54%] Building C object src/CMakeFiles/gel_ppc.dir/prog.c.o
+[ 56%] Building C object src/CMakeFiles/gel_ppc.dir/sect.c.o
+[ 57%] Building C object src/CMakeFiles/gel_ppc.dir/sym.c.o
+[ 59%] Building C object src/CMakeFiles/gel_ppc.dir/util.c.o
+[ 60%] Building C object src/CMakeFiles/gel_ppc.dir/plugsys0.c.o
+[ 61%] Building C object src/CMakeFiles/gel_ppc.dir/plugarch0.c.o
+[ 63%] Building C object src/CMakeFiles/gel_ppc.dir/plugarch20.c.o
+[ 64%] Building C object src/CMakeFiles/gel_ppc.dir/gel_static.c.o
+[ 66%] Linking C shared library libgel_ppc.so
+[ 66%] Built target gel_ppc
+[ 67%] Building C object src/CMakeFiles/gel_debug.dir/dwarf_line.c.o
+[ 69%] Building C object src/CMakeFiles/gel_debug.dir/debug_line.c.o
+[ 70%] Building C object src/CMakeFiles/gel_debug.dir/stabs.c.o
+[ 71%] Linking C shared library libgel_debug.so
+[ 71%] Built target gel_debug
+[ 73%] Building C object src/CMakeFiles/gel_dwarf.dir/dwarf_line.c.o
+[ 74%] Building C object src/CMakeFiles/gel_dwarf.dir/debug_line.c.o
+[ 76%] Building C object src/CMakeFiles/gel_dwarf.dir/stabs.c.o
+[ 77%] Linking C shared library libgel_dwarf.so
+[ 77%] Built target gel_dwarf
+[ 78%] Building C object test/CMakeFiles/test_stabs.dir/test_stabs.c.o
+[ 80%] Linking C executable test_stabs
+[ 80%] Built target test_stabs
+[ 81%] Building C object tools/CMakeFiles/gel-file.dir/gel-file.c.o
+[ 83%] Linking C executable gel-file
+[ 83%] Built target gel-file
+[ 84%] Building C object tools/CMakeFiles/gel-line.dir/gel_line.c.o
+[ 85%] Linking C executable gel-line
+[ 85%] Built target gel-line
+[ 87%] Building C object tools/CMakeFiles/gel-prog.dir/gel_prog.c.o
+[ 88%] Linking C executable gel-prog
+[ 88%] Built target gel-prog
+[ 90%] Building C object tools/CMakeFiles/gel-sect.dir/gel-sect.c.o
+[ 91%] Linking C executable gel-sect
+[ 91%] Built target gel-sect
+[ 92%] Building C object tools/CMakeFiles/gel-sym.dir/gel-sym.c.o
+[ 94%] Linking C executable gel-sym
+[ 94%] Built target gel-sym
+[ 95%] Building C object tools/CMakeFiles/gel-reloc.dir/gel-reloc.c.o
+[ 97%] Linking C executable gel-reloc
+[ 97%] Built target gel-reloc
+[ 98%] Building C object tools/CMakeFiles/gel-im.dir/gel-im.c.o
+[100%] Linking C executable gel-im
+[100%] Built target gel-im
+
+Installing gel: make install
+
+Dowloading otawa: git clone https://git.renater.fr/anonscm/git/otawa/otawa.git /tmp/tmpLtrW0Y-sis/otawaCloning into '/tmp/tmpLtrW0Y-sis/otawa'...
+
+Setting up otawa: cmake . -DCMAKE_INSTALL_PREFIX=/home/mali54/OCaml-Work/OTAWA/ex-computation -DCMAKE_SYSTEM_PREFIX_PATH=/home/mali54/OCaml-Work/OTAWA/ex-computation
+CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+-- The C compiler identification is GNU 10.2.0
+-- The CXX compiler identification is GNU 10.2.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- concurrency support disabled!
+-- OTAWA version: 
+-- OTAWA date: 08/06/2021
+-- Using Unix system, not MacOS
+CMake Warning at CMakeLists.txt:153 (message):
+  Doxygen not found, cannot generate documentation
+
+
+-- ELM_PATH=/tmp/tmpLtrW0Y-sis/otawa/../elm
+-- libelm found at /tmp/tmpLtrW0Y-sis/elm/src/libelm.so
+-- libgel found at /tmp/tmpLtrW0Y-sis/gel/src/libgel.so
+-- GraphViz dot not found
+-- Found PythonInterp: /usr/bin/python (found version "3.9.5") 
+-- Found PythonLibs: /usr/lib/libpython3.9.so (found version "3.9.5") 
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+ModuleNotFoundError: No module named 'pygtk'
+-- pygtk not found
+-- otawa-xdot.py cannot be installed.
+-- system view tool found (/usr/bin/xdg-open)
+-- Found BISON: /usr/bin/bison  
+-- Found FLEX: 2.6.4  
+-- thot.py not found: cannot generate the OTAWA manual.
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /tmp/tmpLtrW0Y-sis/otawa
+
+Building otawa: make
+[  1%] [BISON][util_fft_parser] Building parser with bison 3.7.6
+util_fft_parser.yy:50.1-24: warning: deprecated directive: ‘%name-prefix "util_fft_"’, use ‘%define api.prefix {util_fft_}’ [-Wdeprecated]
+   50 | %name-prefix "util_fft_"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~
+      | %define api.prefix {util_fft_}
+util_fft_parser.yy:53.1-14: warning: deprecated directive: ‘%error-verbose’, use ‘%define parse.error verbose’ [-Wdeprecated]
+   53 | %error-verbose
+      | ^~~~~~~~~~~~~~
+      | %define parse.error verbose
+util_fft_parser.yy: warning: fix-its can be applied.  Rerun with option '--update'. [-Wother]
+[  1%] [FLEX][ipet_lexer] Building scanner with flex 2.6.4
+[  1%] [BISON][ipet_parser] Building parser with bison 3.7.6
+ipet_parser.yy:20.1-20: warning: deprecated directive: ‘%name-prefix "ipet_"’, use ‘%define api.prefix {ipet_}’ [-Wdeprecated]
+   20 | %name-prefix "ipet_"
+      | ^~~~~~~~~~~~~~~~~~~~
+      | %define api.prefix {ipet_}
+ipet_parser.yy:23.1-14: warning: deprecated directive: ‘%error-verbose’, use ‘%define parse.error verbose’ [-Wdeprecated]
+   23 | %error-verbose
+      | ^~~~~~~~~~~~~~
+      | %define parse.error verbose
+ipet_parser.yy: warning: fix-its can be applied.  Rerun with option '--update'. [-Wother]
+[  1%] [FLEX][util_fft_lexer] Building scanner with flex 2.6.4
+[  1%] Building CXX object src/prog/CMakeFiles/otawa.dir/base.cpp.o
+[  2%] Building CXX object src/prog/CMakeFiles/otawa.dir/type.cpp.o
+[  2%] Building CXX object src/prog/CMakeFiles/otawa.dir/Loader.cpp.o
+[  2%] Building CXX object src/prog/CMakeFiles/otawa.dir/dfa_MemorySet.cpp.o
+[  3%] Building CXX object src/prog/CMakeFiles/otawa.dir/CFG.cpp.o
+[  3%] Building CXX object src/prog/CMakeFiles/otawa.dir/cfg_CFGCollector.cpp.o
+[  4%] Building CXX object src/prog/CMakeFiles/otawa.dir/pcg_PCG.cpp.o
+[  4%] Building CXX object src/prog/CMakeFiles/otawa.dir/pcg_PCGBuilder.cpp.o
+[  4%] Building CXX object src/prog/CMakeFiles/otawa.dir/cfg_AbstractCFGBuilder.cpp.o
+[  5%] Building CXX object src/prog/CMakeFiles/otawa.dir/cfg_CFGAdapter.cpp.o
+[  5%] Building CXX object src/prog/CMakeFiles/otawa.dir/cfg_CFGBuilder.cpp.o
+[  5%] Building CXX object src/prog/CMakeFiles/otawa.dir/cfg_CFGChecker.cpp.o
+[  6%] Building CXX object src/prog/CMakeFiles/otawa.dir/cfg_CFGCheckSummer.cpp.o
+[  6%] Building CXX object src/prog/CMakeFiles/otawa.dir/cfg_CFGInfo.cpp.o
+[  6%] Building CXX object src/prog/CMakeFiles/otawa.dir/cfg_CFGTransformer.cpp.o
+[  7%] Building CXX object src/prog/CMakeFiles/otawa.dir/cfg_ConditionalRestructurer.cpp.o
+[  7%] Building CXX object src/prog/CMakeFiles/otawa.dir/cfg_DelayedBuilder.cpp.o
+[  7%] Building CXX object src/prog/CMakeFiles/otawa.dir/cfg_Dominance.cpp.o
+[  8%] Building CXX object src/prog/CMakeFiles/otawa.dir/cfg_interproc.cpp.o
+[  8%] Building CXX object src/prog/CMakeFiles/otawa.dir/cfg_Loop.cpp.o
+[  8%] Building CXX object src/prog/CMakeFiles/otawa.dir/cfg_LoopIdentifier.cpp.o
+[  9%] Building CXX object src/prog/CMakeFiles/otawa.dir/cfg_LoopInfoBuilder.cpp.o
+[  9%] Building CXX object src/prog/CMakeFiles/otawa.dir/cfg_LoopReductor.cpp.o
+[  9%] Building CXX object src/prog/CMakeFiles/otawa.dir/cfg_LoopUnroller.cpp.o
+[ 10%] Building CXX object src/prog/CMakeFiles/otawa.dir/cfg_PostDominance.cpp.o
+[ 10%] Building CXX object src/prog/CMakeFiles/otawa.dir/cfg_SubCFGBuilder.cpp.o
+[ 10%] Building CXX object src/prog/CMakeFiles/otawa.dir/cfg_Virtualizer.cpp.o
+[ 11%] Building CXX object src/prog/CMakeFiles/otawa.dir/cfg_Weighter.cpp.o
+[ 11%] Building CXX object src/prog/CMakeFiles/otawa.dir/cfgio_Input.cpp.o
+[ 11%] Building CXX object src/prog/CMakeFiles/otawa.dir/cfgio_Output.cpp.o
+[ 12%] Building CXX object src/prog/CMakeFiles/otawa.dir/BBRatioDisplayer.cpp.o
+[ 12%] Building CXX object src/prog/CMakeFiles/otawa.dir/app_Application.cpp.o
+[ 12%] Building CXX object src/prog/CMakeFiles/otawa.dir/app_AddressOption.cpp.o
+[ 13%] Building CXX object src/prog/CMakeFiles/otawa.dir/app_CFGApplication.cpp.o
+[ 13%] Building CXX object src/prog/CMakeFiles/otawa.dir/app_Test.cpp.o
+[ 14%] Building CXX object src/prog/CMakeFiles/otawa.dir/icache.cpp.o
+[ 14%] Building CXX object src/prog/CMakeFiles/otawa.dir/ilp_AbstractSystem.cpp.o
+[ 14%] Building CXX object src/prog/CMakeFiles/otawa.dir/ilp_Constraint.cpp.o
+[ 15%] Building CXX object src/prog/CMakeFiles/otawa.dir/ilp_Expression.cpp.o
+[ 15%] Building CXX object src/prog/CMakeFiles/otawa.dir/ilp_ILPPlugin.cpp.o
+[ 15%] Building CXX object src/prog/CMakeFiles/otawa.dir/ilp_impl.cpp.o
+[ 16%] Building CXX object src/prog/CMakeFiles/otawa.dir/ilp_System.cpp.o
+[ 16%] Building CXX object src/prog/CMakeFiles/otawa.dir/ilp_Var.cpp.o
+[ 16%] Building CXX object src/prog/CMakeFiles/otawa.dir/proc_AlternativeProcessor.cpp.o
+[ 17%] Building CXX object src/prog/CMakeFiles/otawa.dir/proc_Processor.cpp.o
+[ 17%] Building CXX object src/prog/CMakeFiles/otawa.dir/proc_CFGProcessor.cpp.o
+[ 17%] Building CXX object src/prog/CMakeFiles/otawa.dir/proc_ConcurrentCFGProcessor.cpp.o
+[ 18%] Building CXX object src/prog/CMakeFiles/otawa.dir/proc_ContextualProcessor.cpp.o
+[ 18%] Building CXX object src/prog/CMakeFiles/otawa.dir/proc_DynFeature.cpp.o
+[ 18%] Building CXX object src/prog/CMakeFiles/otawa.dir/proc_DynProcessor.cpp.o
+[ 19%] Building CXX object src/prog/CMakeFiles/otawa.dir/proc_EdgeProcessor.cpp.o
+[ 19%] Building CXX object src/prog/CMakeFiles/otawa.dir/proc_Feature.cpp.o
+[ 19%] Building CXX object src/prog/CMakeFiles/otawa.dir/proc_FeatureRequirer.cpp.o
+[ 20%] Building CXX object src/prog/CMakeFiles/otawa.dir/proc_LBlockProcessor.cpp.o
+[ 20%] Building CXX object src/prog/CMakeFiles/otawa.dir/proc_BBProcessor.cpp.o
+[ 20%] Building CXX object src/prog/CMakeFiles/otawa.dir/proc_Monitor.cpp.o
+/tmp/tmpLtrW0Y-sis/otawa/src/prog/proc_Monitor.cpp: In member function ‘void otawa::Monitor::configure(const otawa::PropList&, elm::string)’:
+/tmp/tmpLtrW0Y-sis/otawa/src/prog/proc_Monitor.cpp:145:4: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wdangling-else]
+  145 |  if(name != "")
+      |    ^
+[ 21%] Building CXX object src/prog/CMakeFiles/otawa.dir/proc_ProcessorException.cpp.o
+[ 21%] Building CXX object src/prog/CMakeFiles/otawa.dir/proc_ProcessorPlugin.cpp.o
+[ 21%] Building CXX object src/prog/CMakeFiles/otawa.dir/proc_Registry.cpp.o
+[ 22%] Building CXX object src/prog/CMakeFiles/otawa.dir/stats.cpp.o
+[ 22%] Building CXX object src/prog/CMakeFiles/otawa.dir/stats_BBStatCollector.cpp.o
+[ 22%] Building CXX object src/prog/CMakeFiles/otawa.dir/prop_AbstractIdentifier.cpp.o
+[ 23%] Building CXX object src/prog/CMakeFiles/otawa.dir/prop_ContextualProperty.cpp.o
+[ 23%] Building CXX object src/prog/CMakeFiles/otawa.dir/prop_DeletableProperty.cpp.o
+[ 24%] Building CXX object src/prog/CMakeFiles/otawa.dir/prop_Identifier.cpp.o
+[ 24%] Building CXX object src/prog/CMakeFiles/otawa.dir/prop_Property.cpp.o
+[ 24%] Building CXX object src/prog/CMakeFiles/otawa.dir/prop_PropList.cpp.o
+[ 25%] Building CXX object src/prog/CMakeFiles/otawa.dir/ipet_BasicConstraintsBuilder.cpp.o
+In file included from /tmp/tmpLtrW0Y-sis/otawa/src/prog/ipet_BasicConstraintsBuilder.cpp:29:
+/tmp/tmpLtrW0Y-sis/otawa/include/otawa/ilp/expr.h:103:10: warning: converting ‘otawa::ilp::model::model_cons’ to a base class ‘otawa::ilp::cons’ will never use a type conversion operator [-Wclass-conversion]
+  103 |   inline operator cons(void) const { return *this; }
+      |          ^~~~~~~~
+[ 25%] Building CXX object src/prog/CMakeFiles/otawa.dir/ipet_BasicObjectFunctionBuilder.cpp.o
+[ 25%] Building CXX object src/prog/CMakeFiles/otawa.dir/ipet_ConstraintLoader.cpp.o
+[ 26%] Building CXX object src/prog/CMakeFiles/otawa.dir/ipet_FlowFactLoader.cpp.o
+[ 26%] Building CXX object src/prog/CMakeFiles/otawa.dir/ipet_FlowFactConstraintBuilder.cpp.o
+[ 26%] Building CXX object src/prog/CMakeFiles/otawa.dir/ipet_FlowFactConflictConstraintBuilder.cpp.o
+[ 27%] Building CXX object src/prog/CMakeFiles/otawa.dir/ipet_ILPSystemGetter.cpp.o
+[ 27%] Building CXX object src/prog/CMakeFiles/otawa.dir/ipet_IPET.cpp.o
+[ 27%] Building CXX object src/prog/CMakeFiles/otawa.dir/ipet_VarAssignment.cpp.o
+[ 28%] Building CXX object src/prog/CMakeFiles/otawa.dir/ipet_WCETComputation.cpp.o
+In file included from /tmp/tmpLtrW0Y-sis/elm/src/../include/elm/data/Array.h:26,
+                 from /tmp/tmpLtrW0Y-sis/elm/src/../include/elm/data/Vector.h:25,
+                 from /tmp/tmpLtrW0Y-sis/elm/src/../include/elm/rtti/Class.h:25,
+                 from /tmp/tmpLtrW0Y-sis/elm/src/../include/elm/rtti.h:25,
+                 from /tmp/tmpLtrW0Y-sis/otawa/include/otawa/prop/AbstractIdentifier.h:25,
+                 from /tmp/tmpLtrW0Y-sis/otawa/include/otawa/prop/Identifier.h:28,
+                 from /tmp/tmpLtrW0Y-sis/otawa/include/otawa/proc/../prop.h:24,
+                 from /tmp/tmpLtrW0Y-sis/otawa/include/otawa/proc/Monitor.h:25,
+                 from /tmp/tmpLtrW0Y-sis/otawa/include/otawa/ilp/System.h:29,
+                 from /tmp/tmpLtrW0Y-sis/otawa/include/otawa/ilp.h:27,
+                 from /tmp/tmpLtrW0Y-sis/otawa/src/prog/ipet_WCETComputation.cpp:22:
+/tmp/tmpLtrW0Y-sis/elm/src/../include/elm/array.h: In instantiation of ‘static void elm::array::fast<T>::copy(T*, const T*, int) [with T = elm::CString]’:
+/tmp/tmpLtrW0Y-sis/elm/src/../include/elm/array.h:71:55:   required from ‘void elm::array::copy(T*, const T*, int) [with T = elm::CString]’
+/tmp/tmpLtrW0Y-sis/elm/src/../include/elm/data/Vector.h:58:45:   required from ‘void elm::Vector<T, E, A>::grow(int) [with T = elm::CString; E = elm::Equiv<elm::CString>; A = elm::DefaultAlloc]’
+/tmp/tmpLtrW0Y-sis/elm/src/../include/elm/data/Vector.h:102:40:   required from ‘void elm::Vector<T, E, A>::add(const T&) [with T = elm::CString; E = elm::Equiv<elm::CString>; A = elm::DefaultAlloc]’
+/tmp/tmpLtrW0Y-sis/otawa/src/prog/ipet_WCETComputation.cpp:280:63:   required from here
+/tmp/tmpLtrW0Y-sis/elm/src/../include/elm/array.h:39:13: warning: ‘void* memcpy(void*, const void*, size_t)’ writing to an object of type ‘class elm::CString’ with no trivial copy-assignment; use copy-assignment or copy-initialization instead [-Wclass-memaccess]
+   39 |   { ::memcpy(target, source, size * sizeof(T)); }
+      |     ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /tmp/tmpLtrW0Y-sis/elm/src/../include/elm/io/UnixInStream.h:10,
+                 from /tmp/tmpLtrW0Y-sis/elm/src/../include/elm/sys/SystemIO.h:26,
+                 from /tmp/tmpLtrW0Y-sis/elm/src/../include/elm/io/io.h:10,
+                 from /tmp/tmpLtrW0Y-sis/elm/src/../include/elm/io.h:23,
+                 from /tmp/tmpLtrW0Y-sis/otawa/include/otawa/ilp/Var.h:25,
+                 from /tmp/tmpLtrW0Y-sis/otawa/include/otawa/ilp.h:25,
+                 from /tmp/tmpLtrW0Y-sis/otawa/src/prog/ipet_WCETComputation.cpp:22:
+/tmp/tmpLtrW0Y-sis/elm/src/../include/elm/string/CString.h:17:7: note: ‘class elm::CString’ declared here
+   17 | class CString {
+      |       ^~~~~~~
+[ 28%] Building CXX object src/prog/CMakeFiles/otawa.dir/ipet_WCETCountRecorder.cpp.o
+[ 28%] Building CXX object src/prog/CMakeFiles/otawa.dir/ilp_Output.cpp.o
+[ 29%] Building CXX object src/prog/CMakeFiles/otawa.dir/dfa_BitSet.cpp.o
+[ 29%] Building CXX object src/prog/CMakeFiles/otawa.dir/dfa_Debug.cpp.o
+[ 29%] Building CXX object src/prog/CMakeFiles/otawa.dir/dfa_hai_DefaultFixPoint.cpp.o
+[ 30%] Building CXX object src/prog/CMakeFiles/otawa.dir/dfa_hai_DefaultListener.cpp.o
+[ 30%] Building CXX object src/prog/CMakeFiles/otawa.dir/dfa_hai_FirstUnrollingFixPoint.cpp.o
+[ 30%] Building CXX object src/prog/CMakeFiles/otawa.dir/dfa_hai_HalfAbsInt.cpp.o
+[ 31%] Building CXX object src/prog/CMakeFiles/otawa.dir/dfa_hai_UnrollingListener.cpp.o
+[ 31%] Building CXX object src/prog/CMakeFiles/otawa.dir/dfa_hai_WideningFixPoint.cpp.o
+[ 31%] Building CXX object src/prog/CMakeFiles/otawa.dir/dfa_hai_WideningListener.cpp.o
+[ 32%] Building CXX object src/prog/CMakeFiles/otawa.dir/dfa_IterativeDFA.cpp.o
+[ 32%] Building CXX object src/prog/CMakeFiles/otawa.dir/dfa_XCFGVisitor.cpp.o
+[ 32%] Building CXX object src/prog/CMakeFiles/otawa.dir/dfa_XIterativeDFA.cpp.o
+[ 33%] Building CXX object src/prog/CMakeFiles/otawa.dir/util_AccessedAddress.cpp.o
+[ 33%] Building CXX object src/prog/CMakeFiles/otawa.dir/util_StackAnalysis.cpp.o
+[ 34%] Building CXX object src/prog/CMakeFiles/otawa.dir/util_SymAddress.cpp.o
+[ 34%] Building CXX object src/prog/CMakeFiles/otawa.dir/dfa_State.cpp.o
+[ 34%] Building CXX object src/prog/CMakeFiles/otawa.dir/dfa_Lexicon.cpp.o
+[ 35%] Building CXX object src/prog/CMakeFiles/otawa.dir/ai.cpp.o
+[ 35%] Building CXX object src/prog/CMakeFiles/otawa.dir/ai_FlowAwareRanking.cpp.o
+[ 35%] Building CXX object src/prog/CMakeFiles/otawa.dir/ai_PseudoTopoOrder.cpp.o
+[ 36%] Building CXX object src/prog/CMakeFiles/otawa.dir/util_CFGNormalizer.cpp.o
+[ 36%] Building CXX object src/prog/CMakeFiles/otawa.dir/util_MemBlockMap.cpp.o
+[ 36%] Building CXX object src/prog/CMakeFiles/otawa.dir/util_ContextTree.cpp.o
+[ 37%] Building CXX object src/prog/CMakeFiles/otawa.dir/util_Bag.cpp.o
+[ 37%] Building CXX object src/prog/CMakeFiles/otawa.dir/util_Node.cpp.o
+[ 37%] Building CXX object src/prog/CMakeFiles/otawa.dir/util_Edge.cpp.o
+[ 38%] Building CXX object src/prog/CMakeFiles/otawa.dir/ograph.cpp.o
+[ 38%] Building CXX object src/prog/CMakeFiles/otawa.dir/view.cpp.o
+[ 38%] Building CXX object src/prog/CMakeFiles/otawa.dir/rtti.cpp.o
+/tmp/tmpLtrW0Y-sis/otawa/src/prog/rtti.cpp:77:30: warning: ‘otawa::manager_load’ defined but not used [-Wunused-variable]
+   77 | static WorkSpace *(Manager::*manager_load)(const elm::sys::Path&, const PropList&) = &Manager::load;
+      |                              ^~~~~~~~~~~~
+[ 39%] Building CXX object src/prog/CMakeFiles/otawa.dir/flowfact_ContextualLoopBound.cpp.o
+[ 39%] Building CXX object src/prog/CMakeFiles/otawa.dir/flowfact_FlowFactLoader.cpp.o
+[ 39%] Building CXX object src/prog/CMakeFiles/otawa.dir/util_XSLTScript.cpp.o
+[ 40%] Building CXX object src/prog/CMakeFiles/otawa.dir/script_NamedObject.cpp.o
+[ 40%] Building CXX object src/prog/CMakeFiles/otawa.dir/script_Script.cpp.o
+[ 40%] Building CXX object src/prog/CMakeFiles/otawa.dir/hard_Dumper.cpp.o
+[ 41%] Building CXX object src/prog/CMakeFiles/otawa.dir/hard_BHT.cpp.o
+[ 41%] Building CXX object src/prog/CMakeFiles/otawa.dir/hard_Processor.cpp.o
+[ 41%] Building CXX object src/prog/CMakeFiles/otawa.dir/hardware_Cache.cpp.o
+[ 42%] Building CXX object src/prog/CMakeFiles/otawa.dir/hardware_CacheConfiguration.cpp.o
+[ 42%] Building CXX object src/prog/CMakeFiles/otawa.dir/hardware_Platform.cpp.o
+[ 42%] Building CXX object src/prog/CMakeFiles/otawa.dir/hardware_PureCache.cpp.o
+[ 43%] Building CXX object src/prog/CMakeFiles/otawa.dir/hard_Register.cpp.o
+[ 43%] Building CXX object src/prog/CMakeFiles/otawa.dir/hard_Memory.cpp.o
+[ 44%] Building CXX object src/prog/CMakeFiles/otawa.dir/cache_ACSBuilder.cpp.o
+[ 44%] Building CXX object src/prog/CMakeFiles/otawa.dir/cache_ACSMayBuilder.cpp.o
+[ 44%] Building CXX object src/prog/CMakeFiles/otawa.dir/cache_categories.cpp.o
+[ 45%] Building CXX object src/prog/CMakeFiles/otawa.dir/cache_CAT2Builder.cpp.o
+[ 45%] Building CXX object src/prog/CMakeFiles/otawa.dir/cache_CAT2NCBuilder.cpp.o
+[ 45%] Building CXX object src/prog/CMakeFiles/otawa.dir/cache_CAT2ConstraintBuilder.cpp.o
+[ 46%] Building CXX object src/prog/CMakeFiles/otawa.dir/cache_CachePenalty.cpp.o
+[ 46%] Building CXX object src/prog/CMakeFiles/otawa.dir/cache_MUSTProblem.cpp.o
+[ 46%] Building CXX object src/prog/CMakeFiles/otawa.dir/cache_MAYProblem.cpp.o
+[ 47%] Building CXX object src/prog/CMakeFiles/otawa.dir/cache_PERSProblem.cpp.o
+[ 47%] Building CXX object src/prog/CMakeFiles/otawa.dir/cache_MUSTPERS.cpp.o
+[ 47%] Building CXX object src/prog/CMakeFiles/otawa.dir/cache_LinkedBlocksDetector.cpp.o
+[ 48%] Building CXX object src/prog/CMakeFiles/otawa.dir/cache_LBlock.cpp.o
+[ 48%] Building CXX object src/prog/CMakeFiles/otawa.dir/cache_FirstLastBuilder.cpp.o
+[ 48%] Building CXX object src/prog/CMakeFiles/otawa.dir/cache_LBlockSet.cpp.o
+[ 49%] Building CXX object src/prog/CMakeFiles/otawa.dir/cache_CachePenaltiesObjectFunctionBuilder.cpp.o
+[ 49%] Building CXX object src/prog/CMakeFiles/otawa.dir/cache_LBlockBuilder.cpp.o
+[ 49%] Building CXX object src/prog/CMakeFiles/otawa.dir/prog_Bundle.cpp.o
+[ 50%] Building CXX object src/prog/CMakeFiles/otawa.dir/prog_File.cpp.o
+[ 50%] Building CXX object src/prog/CMakeFiles/otawa.dir/prog_FixedTextDecoder.cpp.o
+[ 50%] Building CXX object src/prog/CMakeFiles/otawa.dir/prog_Inst.cpp.o
+[ 51%] Building CXX object src/prog/CMakeFiles/otawa.dir/prog_Label.cpp.o
+[ 51%] Building CXX object src/prog/CMakeFiles/otawa.dir/prog_Manager.cpp.o
+[ 51%] Building CXX object src/prog/CMakeFiles/otawa.dir/prog_ProgItem.cpp.o
+[ 52%] Building CXX object src/prog/CMakeFiles/otawa.dir/prog_Process.cpp.o
+[ 52%] Building CXX object src/prog/CMakeFiles/otawa.dir/prog_Segment.cpp.o
+[ 52%] Building CXX object src/prog/CMakeFiles/otawa.dir/prog_Symbol.cpp.o
+[ 53%] Building CXX object src/prog/CMakeFiles/otawa.dir/prog_TextDecoder.cpp.o
+[ 53%] Building CXX object src/prog/CMakeFiles/otawa.dir/prog_VarTextDecoder.cpp.o
+[ 54%] Building CXX object src/prog/CMakeFiles/otawa.dir/prog_VirtualInst.cpp.o
+[ 54%] Building CXX object src/prog/CMakeFiles/otawa.dir/prog_WorkSpace.cpp.o
+[ 54%] Building CXX object src/prog/CMakeFiles/otawa.dir/sem.cpp.o
+[ 55%] Building CXX object src/prog/CMakeFiles/otawa.dir/parexegraph_ParExeProc.cpp.o
+[ 55%] Building CXX object src/prog/CMakeFiles/otawa.dir/parexegraph_Resource.cpp.o
+[ 55%] Building CXX object src/prog/CMakeFiles/otawa.dir/parexegraph_ParExeGraph.cpp.o
+In file included from /tmp/tmpLtrW0Y-sis/otawa/src/prog/parexegraph_ParExeGraph.cpp:3:
+/tmp/tmpLtrW0Y-sis/otawa/include/otawa/parexegraph/ParExeGraph.h: In constructor ‘otawa::ParExeGraph::ParExeGraph(otawa::WorkSpace*, otawa::ParExeProc*, elm::Vector<otawa::Resource*>*, otawa::ParExeSequence*, const otawa::PropList&)’:
+/tmp/tmpLtrW0Y-sis/otawa/include/otawa/parexegraph/ParExeGraph.h:248:7: warning: ‘otawa::ParExeGraph::_capacity’ will be initialized after [-Wreorder]
+  248 |   int _capacity;                          // ====== REALLY USEFUL? (used in analyze())
+      |       ^~~~~~~~~
+/tmp/tmpLtrW0Y-sis/otawa/include/otawa/parexegraph/ParExeGraph.h:244:7: warning:   ‘int otawa::ParExeGraph::_branch_penalty’ [-Wreorder]
+  244 |   int _branch_penalty;                       // ====== REALLY USEFUL?
+      |       ^~~~~~~~~~~~~~~
+/tmp/tmpLtrW0Y-sis/otawa/src/prog/parexegraph_ParExeGraph.cpp:1464:1: warning:   when initialized here [-Wreorder]
+ 1464 | ParExeGraph::ParExeGraph(
+      | ^~~~~~~~~~~
+[ 56%] Building CXX object src/prog/CMakeFiles/otawa.dir/parexegraph_GraphBBTime.cpp.o
+[ 56%] Building CXX object src/prog/CMakeFiles/otawa.dir/util_Trace.cpp.o
+[ 56%] Building CXX object src/prog/CMakeFiles/otawa.dir/sgraph_DiGraph.cpp.o
+[ 57%] Building CXX object src/prog/CMakeFiles/otawa.dir/sgraph_LoopIdentifier.cpp.o
+[ 57%] Building CXX object src/prog/CMakeFiles/otawa.dir/sim_Simulator.cpp.o
+[ 57%] Building CXX object src/prog/CMakeFiles/otawa.dir/sim_State.cpp.o
+[ 58%] Building CXX object src/prog/CMakeFiles/otawa.dir/sim_AbstractCacheDriver.cpp.o
+[ 58%] Building CXX object src/prog/CMakeFiles/otawa.dir/sim_CacheDriver.cpp.o
+[ 58%] Building CXX object src/prog/CMakeFiles/otawa.dir/sim_TrivialSimulator.cpp.o
+[ 59%] Building CXX object src/prog/CMakeFiles/otawa.dir/sim_Driver.cpp.o
+[ 59%] Building CXX object src/prog/CMakeFiles/otawa.dir/sim_BasicBlockDriver.cpp.o
+[ 59%] Building CXX object src/prog/CMakeFiles/otawa.dir/BBTimeSimulator.cpp.o
+[ 60%] Building CXX object src/prog/CMakeFiles/otawa.dir/loader_arm.cpp.o
+[ 60%] Building CXX object src/prog/CMakeFiles/otawa.dir/ipet_parser.cpp.o
+[ 60%] Building CXX object src/prog/CMakeFiles/otawa.dir/ipet_lexer.cc.o
+[ 61%] Building CXX object src/prog/CMakeFiles/otawa.dir/util_fft_parser.cpp.o
+[ 61%] Building CXX object src/prog/CMakeFiles/otawa.dir/util_fft_lexer.cc.o
+[ 61%] Linking CXX shared library libotawa.so
+[ 61%] Built target otawa
+[ 62%] Building CXX object src/branch/CMakeFiles/branch.dir/branch_BranchBuilder.cpp.o
+[ 62%] Building CXX object src/branch/CMakeFiles/branch.dir/branch_BranchProblem.cpp.o
+[ 62%] Building CXX object src/branch/CMakeFiles/branch.dir/branch_CondNumber.cpp.o
+[ 63%] Building CXX object src/branch/CMakeFiles/branch.dir/branch_ConsBuilder.cpp.o
+In file included from /tmp/tmpLtrW0Y-sis/otawa/include/otawa/branch/ConsBuilder.h:27,
+                 from /tmp/tmpLtrW0Y-sis/otawa/src/branch/branch_ConsBuilder.cpp:24:
+/tmp/tmpLtrW0Y-sis/otawa/include/otawa/ilp/expr.h:103:10: warning: converting ‘otawa::ilp::model::model_cons’ to a base class ‘otawa::ilp::cons’ will never use a type conversion operator [-Wclass-conversion]
+  103 |   inline operator cons(void) const { return *this; }
+      |          ^~~~~~~~
+[ 63%] Building CXX object src/branch/CMakeFiles/branch.dir/branch_hook.cpp.o
+[ 63%] Linking CXX shared library branch.so
+[ 63%] Built target branch
+[ 64%] Building CXX object src/clp/CMakeFiles/clp.dir/clp_analysis.cpp.o
+[ 64%] Building CXX object src/clp/CMakeFiles/clp.dir/clp_symbolic_expr.cpp.o
+[ 64%] Building CXX object src/clp/CMakeFiles/clp.dir/clp_export.cpp.o
+[ 65%] Building CXX object src/clp/CMakeFiles/clp.dir/clp_import.cpp.o
+[ 65%] Linking CXX shared library clp.so
+[ 65%] Built target clp
+[ 66%] Building CXX object src/dynbranch/CMakeFiles/dynbranch.dir/dynbranch_DynamicBranching.cpp.o
+[ 66%] Building CXX object src/dynbranch/CMakeFiles/dynbranch.dir/dynbranch_GlobalAnalysis.cpp.o
+[ 66%] Building CXX object src/dynbranch/CMakeFiles/dynbranch.dir/dynbranch_GlobalAnalysisProblem.cpp.o
+[ 67%] Building CXX object src/dynbranch/CMakeFiles/dynbranch.dir/dynbranch_hook.cpp.o
+[ 67%] Building CXX object src/dynbranch/CMakeFiles/dynbranch.dir/dynbranch_MemType.cpp.o
+[ 67%] Building CXX object src/dynbranch/CMakeFiles/dynbranch.dir/dynbranch_PotentialValue.cpp.o
+[ 68%] Building CXX object src/dynbranch/CMakeFiles/dynbranch.dir/dynbranch_State.cpp.o
+[ 68%] Building CXX object src/dynbranch/CMakeFiles/dynbranch.dir/FastStateWrapper.cpp.o
+[ 69%] Linking CXX shared library dynbranch.so
+[ 69%] Built target dynbranch
+[ 69%] Building CXX object src/dcache/CMakeFiles/dcache.dir/dcache.cpp.o
+[ 70%] Building CXX object src/dcache/CMakeFiles/dcache.dir/dcache_ACSBuilder.cpp.o
+[ 70%] Building CXX object src/dcache/CMakeFiles/dcache.dir/dcache_ACSMayBuilder.cpp.o
+[ 71%] Building CXX object src/dcache/CMakeFiles/dcache.dir/dcache_BlockBuilder.cpp.o
+[ 71%] Building CXX object src/dcache/CMakeFiles/dcache.dir/dcache_CatBuilder.cpp.o
+In file included from /tmp/tmpLtrW0Y-sis/otawa/src/dcache/dcache_CatBuilder.cpp:25:
+/tmp/tmpLtrW0Y-sis/otawa/include/otawa/dcache/CatBuilder.h: In constructor ‘otawa::dcache::CATBuilder::CATBuilder(otawa::p::declare&)’:
+/tmp/tmpLtrW0Y-sis/otawa/include/otawa/dcache/CatBuilder.h:49:14: warning: ‘otawa::dcache::CATBuilder::probMay’ will be initialized after [-Wreorder]
+   49 |  MAYProblem *probMay;
+      |              ^~~~~~~
+/tmp/tmpLtrW0Y-sis/otawa/include/otawa/dcache/CatBuilder.h:46:20: warning:   ‘otawa::cache::category_t otawa::dcache::CATBuilder::wt_def_cat’ [-Wreorder]
+   46 |  cache::category_t wt_def_cat;
+      |                    ^~~~~~~~~~
+/tmp/tmpLtrW0Y-sis/otawa/src/dcache/dcache_CatBuilder.cpp:60:1: warning:   when initialized here [-Wreorder]
+   60 | CATBuilder::CATBuilder(p::declare& r)
+      | ^~~~~~~~~~
+[ 71%] Building CXX object src/dcache/CMakeFiles/dcache.dir/dcache_CatConstraintBuilder.cpp.o
+[ 72%] Building CXX object src/dcache/CMakeFiles/dcache.dir/dcache_CLPBlockBuilder.cpp.o
+[ 72%] Building CXX object src/dcache/CMakeFiles/dcache.dir/dcache_WCETFunctionBuilder.cpp.o
+[ 72%] Building CXX object src/dcache/CMakeFiles/dcache.dir/Dirty.cpp.o
+[ 73%] Building CXX object src/dcache/CMakeFiles/dcache.dir/Purge.cpp.o
+[ 73%] Linking CXX shared library dcache.so
+[ 73%] Built target dcache
+[ 73%] Building CXX object src/etime/CMakeFiles/etime.dir/AbstractTimeBuilder.cpp.o
+[ 73%] Building CXX object src/etime/CMakeFiles/etime.dir/StandardXGraphBuilder.cpp.o
+[ 74%] Building CXX object src/etime/CMakeFiles/etime.dir/StandardXGraphSolver.cpp.o
+[ 74%] Building CXX object src/etime/CMakeFiles/etime.dir/StandardILPGenerator.cpp.o
+[ 74%] Building CXX object src/etime/CMakeFiles/etime.dir/EdgeTimeBuilder.cpp.o
+[ 75%] Building CXX object src/etime/CMakeFiles/etime.dir/hook.cpp.o
+[ 75%] Building CXX object src/etime/CMakeFiles/etime.dir/StandardEventBuilder.cpp.o
+[ 75%] Building CXX object src/etime/CMakeFiles/etime.dir/TimeUnitTimer.cpp.o
+[ 76%] Building CXX object src/etime/CMakeFiles/etime.dir/StepGraphBuilder.cpp.o
+[ 76%] Linking CXX shared library etime.so
+[ 76%] Built target etime
+[ 76%] Building CXX object src/ocpp/CMakeFiles/ocpp.dir/Unmangler.cpp.o
+[ 76%] Linking CXX shared library libocpp.so
+[ 76%] Built target ocpp
+[ 77%] Building CXX object src/odec/CMakeFiles/odec.dir/odec.cpp.o
+[ 77%] Linking CXX executable odec
+[ 77%] Built target odec
+[ 77%] Building CXX object src/odisplay/CMakeFiles/display.dir/display.cpp.o
+[ 78%] Building CXX object src/odisplay/CMakeFiles/display.dir/display_CFGDisplayer.cpp.o
+[ 78%] Building CXX object src/odisplay/CMakeFiles/display.dir/display_CFGOutput.cpp.o
+[ 78%] Building CXX object src/odisplay/CMakeFiles/display.dir/display_Displayer.cpp.o
+[ 79%] Building CXX object src/odisplay/CMakeFiles/display.dir/display_Plugin.cpp.o
+[ 79%] Building CXX object src/odisplay/CMakeFiles/display.dir/ILPSystemDisplayer.cpp.o
+[ 79%] Linking CXX shared library display.so
+[ 79%] Built target display
+[ 79%] Building CXX object src/oslice/CMakeFiles/oslice.dir/DotDisplayer.cpp.o
+[ 80%] Building CXX object src/oslice/CMakeFiles/oslice.dir/oslice_hook.cpp.o
+[ 80%] Building CXX object src/oslice/CMakeFiles/oslice.dir/oslice_identifiers.cpp.o
+[ 80%] Building CXX object src/oslice/CMakeFiles/oslice.dir/CondBranchCollector.cpp.o
+[ 81%] Building CXX object src/oslice/CMakeFiles/oslice.dir/DummySlicer.cpp.o
+[ 81%] Building CXX object src/oslice/CMakeFiles/oslice.dir/InstructionCollector.cpp.o
+[ 81%] Building CXX object src/oslice/CMakeFiles/oslice.dir/LivenessChecker.cpp.o
+[ 82%] Building CXX object src/oslice/CMakeFiles/oslice.dir/Slicer.cpp.o
+[ 82%] Linking CXX shared library oslice.so
+[ 82%] Built target oslice
+[ 82%] Building CXX object src/icat3/CMakeFiles/icat3.dir/icat3_CatBuilder.cpp.o
+[ 83%] Building CXX object src/icat3/CMakeFiles/icat3.dir/icat3_EdgeEventBuilder.cpp.o
+[ 83%] Building CXX object src/icat3/CMakeFiles/icat3.dir/icat3_hook.cpp.o
+[ 83%] Building CXX object src/icat3/CMakeFiles/icat3.dir/icat3_LBlockBuilder.cpp.o
+[ 84%] Building CXX object src/icat3/CMakeFiles/icat3.dir/icat3_MustDomain.cpp.o
+[ 84%] Building CXX object src/icat3/CMakeFiles/icat3.dir/icat3_MustPersDomain.cpp.o
+[ 84%] Building CXX object src/icat3/CMakeFiles/icat3.dir/icat3_MustPersAnalysis.cpp.o
+[ 85%] Building CXX object src/icat3/CMakeFiles/icat3.dir/icat3_PersDomain.cpp.o
+[ 85%] Building CXX object src/icat3/CMakeFiles/icat3.dir/icat3_MayAnalysis.cpp.o
+[ 85%] Linking CXX shared library icat3.so
+[ 85%] Built target icat3
+[ 85%] Building CXX object src/trivial/CMakeFiles/trivial.dir/trivial.cpp.o
+In file included from /tmp/tmpLtrW0Y-sis/otawa/src/trivial/trivial.cpp:27:
+/tmp/tmpLtrW0Y-sis/otawa/include/otawa/ilp/expr.h:103:10: warning: converting ‘otawa::ilp::model::model_cons’ to a base class ‘otawa::ilp::cons’ will never use a type conversion operator [-Wclass-conversion]
+  103 |   inline operator cons(void) const { return *this; }
+      |          ^~~~~~~~
+[ 86%] Linking CXX shared library trivial.so
+[ 86%] Built target trivial
+[ 86%] Building CXX object src/bpred/CMakeFiles/bpred.dir/BBHG.cpp.o
+[ 86%] Building CXX object src/bpred/CMakeFiles/bpred.dir/BBHGDrawer.cpp.o
+[ 87%] Building CXX object src/bpred/CMakeFiles/bpred.dir/BHG.cpp.o
+[ 87%] Building CXX object src/bpred/CMakeFiles/bpred.dir/BHGDrawer.cpp.o
+[ 87%] Building CXX object src/bpred/CMakeFiles/bpred.dir/BCG.cpp.o
+[ 88%] Building CXX object src/bpred/CMakeFiles/bpred.dir/BCGDrawer.cpp.o
+[ 88%] Building CXX object src/bpred/CMakeFiles/bpred.dir/BSets.cpp.o
+[ 88%] Building CXX object src/bpred/CMakeFiles/bpred.dir/BPredProcessor_NoConflict.cpp.o
+[ 89%] Building CXX object src/bpred/CMakeFiles/bpred.dir/BPredProcessor_Bimodal.cpp.o
+[ 89%] Building CXX object src/bpred/CMakeFiles/bpred.dir/BPredProcessor_Global1B.cpp.o
+[ 89%] Building CXX object src/bpred/CMakeFiles/bpred.dir/BPredProcessor_Global2B.cpp.o
+[ 90%] Building CXX object src/bpred/CMakeFiles/bpred.dir/BPredProcessor_stats.cpp.o
+[ 90%] Building CXX object src/bpred/CMakeFiles/bpred.dir/BPredProcessor.cpp.o
+[ 90%] Linking CXX shared library bpred.so
+[ 90%] Built target bpred
+[ 91%] Building CXX object src/config/CMakeFiles/otawa-config.dir/config.cpp.o
+[ 91%] Linking CXX executable otawa-config
+[ 91%] Built target otawa-config
+[ 92%] Building CXX object src/dumpcfg/CMakeFiles/dumpcfg.dir/dumpcfg.cpp.o
+[ 92%] Building CXX object src/dumpcfg/CMakeFiles/dumpcfg.dir/SimpleDisplayer.cpp.o
+[ 92%] Building CXX object src/dumpcfg/CMakeFiles/dumpcfg.dir/DisassemblerDisplayer.cpp.o
+[ 93%] Building CXX object src/dumpcfg/CMakeFiles/dumpcfg.dir/DotDisplayer.cpp.o
+[ 93%] Building CXX object src/dumpcfg/CMakeFiles/dumpcfg.dir/MultipleDotDisplayer.cpp.o
+[ 93%] Linking CXX executable dumpcfg
+[ 93%] Built target dumpcfg
+[ 94%] Building CXX object src/mkff/CMakeFiles/mkff.dir/mkff.cpp.o
+[ 94%] Building CXX object src/mkff/CMakeFiles/mkff.dir/display_MultipleDotDisplayer.cpp.o
+[ 94%] Building CXX object src/mkff/CMakeFiles/mkff.dir/display_MKFFDotDisplayer.cpp.o
+[ 95%] Linking CXX executable mkff
+[ 95%] Built target mkff
+[ 96%] Building CXX object src/odfa/CMakeFiles/odfa.dir/odfa.cpp.o
+[ 96%] Linking CXX executable odfa
+[ 96%] Built target odfa
+[ 96%] Building CXX object src/ostat/CMakeFiles/ostat.dir/ostat.cpp.o
+[ 97%] Linking CXX executable ostat
+[ 97%] Built target ostat
+[ 97%] Building CXX object src/opcg/CMakeFiles/opcg.dir/opcg.cpp.o
+[ 97%] Linking CXX executable opcg
+[ 97%] Built target opcg
+[ 98%] Building CXX object src/operform/CMakeFiles/operform.dir/operform.cpp.o
+[ 98%] Linking CXX executable operform
+[ 98%] Built target operform
+[ 98%] Building CXX object src/odisasm/CMakeFiles/odisasm.dir/odisasm.cpp.o
+[ 99%] Linking CXX executable odisasm
+[ 99%] Built target odisasm
+[ 99%] Building CXX object src/owcet/CMakeFiles/owcet.dir/owcet.cpp.o
+[100%] Linking CXX executable owcet
+[100%] Built target owcet
+
+Installing otawa: make install

@@ -1,0 +1,196 @@
+=== created by sis-install.py V1.0 (2021-06-08 10:46:46.646162) ===
+
+
+Dowloading frontc: git clone https://git.renater.fr/anonscm/git/orange/Frontc.git /tmp/tmpfqc3tr-sis/frontcCloning into '/tmp/tmpfqc3tr-sis/frontc'...
+
+Building frontc: make 
+make[1]: Entering directory '/tmp/tmpfqc3tr-sis/frontc/frontc'
+ocamllex  -o clexer.ml clexer.mll
+188 states, 1702 transitions, table size 7936 bytes
+ocamlyacc -v cparser.mly
+9 shift/reduce conflicts.
+ocamlc  -o cabs.cmo -c cabs.ml
+ocamlc  -o cxml.cmo -c cxml.ml
+ocamlc  -o cprint.cmo -c cprint.ml
+ocamlc  -o cparser.cmi -c cparser.mli
+ocamlc  -o clexer.cmo -c clexer.ml
+ocamlc  -o cparser.cmo -c cparser.ml
+ocamlc  -o ctoxml.cmo -c ctoxml.ml
+ocamlc  -o mergec.cmo -c mergec.ml
+ocamlc  -o frontc.cmo -c frontc.ml
+ocamlc  -o sortrec.cmo -c sortrec.ml
+ocamlc  -o iftofor.cmo -c iftofor.ml
+ocamlc  -o gen.cmo -c gen.ml
+ocamlc  -o reduce.cmo -c reduce.ml
+ocamlc  -o label.cmo -c label.ml
+ocamlc  -o algo.cmo -c algo.ml
+ocamlc  -o calipso.cmo -c calipso.ml
+ocamlc -a   -o frontc.cma cabs.cmo cxml.cmo cprint.cmo clexer.cmo cparser.cmo ctoxml.cmo mergec.cmo sortrec.cmo iftofor.cmo gen.cmo reduce.cmo label.cmo algo.cmo calipso.cmo frontc.cmo 
+ocamlopt  -o cabs.cmx -c cabs.ml
+ocamlopt  -o cxml.cmx -c cxml.ml
+ocamlopt  -o cprint.cmx -c cprint.ml
+make[1]: Circular cparser.cmx <- clexer.cmx dependency dropped.
+make[1]: Circular cparser.cmx <- clexer.cmx dependency dropped.
+ocamlopt  -o cparser.cmx -c cparser.ml
+File "_none_", line 1:
+Warning 58: no cmx file was found in path for module Clexer, and its interface was not compiled with -opaque
+ocamlopt  -o clexer.cmx -c clexer.ml
+ocamlopt  -o ctoxml.cmx -c ctoxml.ml
+ocamlopt  -o mergec.cmx -c mergec.ml
+ocamlopt  -o frontc.cmx -c frontc.ml
+ocamlopt  -o sortrec.cmx -c sortrec.ml
+ocamlopt  -o iftofor.cmx -c iftofor.ml
+ocamlopt  -o gen.cmx -c gen.ml
+ocamlopt  -o reduce.cmx -c reduce.ml
+ocamlopt  -o label.cmx -c label.ml
+ocamlopt  -o algo.cmx -c algo.ml
+ocamlopt  -o calipso.cmx -c calipso.ml
+ocamlopt -a   -o frontc.cmxa cabs.cmx cxml.cmx cprint.cmx clexer.cmx cparser.cmx ctoxml.cmx mergec.cmx sortrec.cmx iftofor.cmx gen.cmx reduce.cmx label.cmx algo.cmx calipso.cmx frontc.cmx 
+make[1]: Leaving directory '/tmp/tmpfqc3tr-sis/frontc/frontc'
+make[1]: Entering directory '/tmp/tmpfqc3tr-sis/frontc/ctoxml'
+ocamlc -I ../frontc -o ctoxml_bin.cmo -c ctoxml_bin.ml
+ctoxml_bin.ml
+ctoxml_bin.cmo
+ocamlc  unix.cma ../frontc/frontc.cma -o ctoxml ctoxml_bin.cmo 
+make[1]: Leaving directory '/tmp/tmpfqc3tr-sis/frontc/ctoxml'
+make[1]: Entering directory '/tmp/tmpfqc3tr-sis/frontc/printc'
+ocamlc -I ../frontc -o printc_bin.cmo -c printc_bin.ml
+printc_bin.ml
+printc_bin.cmo
+ocamlc  unix.cma ../frontc/frontc.cma -o printc printc_bin.cmo 
+make[1]: Leaving directory '/tmp/tmpfqc3tr-sis/frontc/printc'
+make[1]: Entering directory '/tmp/tmpfqc3tr-sis/frontc/calipso'
+ocamlc -I ../frontc -o calipso_bin.cmo -c calipso_bin.ml
+calipso_bin.ml
+calipso_bin.cmo
+ocamlc  unix.cma ../frontc/frontc.cma -o calipso calipso_bin.cmo 
+ocamlc -I ../frontc -o stat.cmo -c stat.ml
+stat.ml
+stat.cmo
+ocamlc  unix.cma ../frontc/frontc.cma -o calipso_stat stat.cmo 
+make[1]: Leaving directory '/tmp/tmpfqc3tr-sis/frontc/calipso'
+make[1]: Entering directory '/tmp/tmpfqc3tr-sis/frontc/mergec'
+ocamlc -I ../frontc -o mergec_bin.cmo -c mergec_bin.ml
+mergec_bin.ml
+mergec_bin.cmo
+ocamlc  unix.cma ../frontc/frontc.cma -o mergec mergec_bin.cmo 
+make[1]: Leaving directory '/tmp/tmpfqc3tr-sis/frontc/mergec'
+
+Dowloading orange: git clone https://git.renater.fr/anonscm/git/orange/orange.git /tmp/tmpfqc3tr-sis/orangeCloning into '/tmp/tmpfqc3tr-sis/orange'...
+
+Building orange: make PREFIX='/home/mali54/OCaml-Work/OTAWA/ex-computation' ONLY_APP=1
+make[1]: Entering directory '/tmp/tmpfqc3tr-sis/orange/xml-light'
+ocamlyacc xml_parser.mly
+ocamlc  xml.mli
+ocamlc  dtd.mli
+ocamlc  xml_parser.mli
+ocamlc  -c xml_parser.ml
+ocamllex xml_lexer.mll
+248 states, 1238 transitions, table size 6440 bytes
+ocamlc  xml_lexer.mli
+ocamlc  -c xml_lexer.ml
+ocamlc  -c dtd.ml
+ocamlc  xmlParser.mli
+ocamlc  -c xmlParser.ml
+ocamlc  -c xml.ml
+ocamlc -o xml-light.cma -a  xml_parser.cmo xml_lexer.cmo dtd.cmo xmlParser.cmo xml.cmo
+ocamlopt  -c xml_parser.ml
+ocamlopt  -c xml_lexer.ml
+ocamlopt  -c dtd.ml
+ocamlopt  -c xmlParser.ml
+ocamlopt  -c xml.ml
+ocamlopt -o xml-light.cmxa -a  xml_parser.cmx xml_lexer.cmx dtd.cmx xmlParser.cmx xml.cmx
+ocamlc xml-light.cma test.ml -o test.exe
+mkdir doc
+ocamldoc -sort -html -d doc xml.mli dtd.mli xmlParser.mli
+make[1]: Leaving directory '/tmp/tmpfqc3tr-sis/orange/xml-light'
+make[1]: Entering directory '/tmp/tmpfqc3tr-sis/orange/O_Range'
+ocamlc -g -annot -I ../../frontc/frontc -I ../xml-light -o conditionAnalysis.cmo -c conditionAnalysis.ml
+ocamlc -g -annot -I ../../frontc/frontc -I ../xml-light -o cexptostr.cmo -c cexptostr.ml
+ocamlc -g -annot -I ../../frontc/frontc -I ../xml-light -o cvariables.cmo -c cvariables.ml
+ocamlc -g -annot -I ../../frontc/frontc -I ../xml-light -o constante.cmo -c constante.ml
+ocamlc -g -annot -I ../../frontc/frontc -I ../xml-light -o coutput.cmo -c coutput.ml
+ocamlc -g -annot -I ../../frontc/frontc -I ../xml-light -o rename.cmo -c rename.ml
+ocamlc -g -annot -I ../../frontc/frontc -I ../xml-light -o util.cmo -c util.ml
+ocamlc -g -annot -I ../../frontc/frontc -I ../xml-light -o extractinfoPtr.cmo -c extractinfoPtr.ml
+ocamlc -g -annot -I ../../frontc/frontc -I ../xml-light -o cvarabs.cmo -c cvarabs.ml
+ocamlc -g -annot -I ../../frontc/frontc -I ../xml-light -o interval.cmo -c interval.ml
+ocamlc -g -annot -I ../../frontc/frontc -I ../xml-light -o increment.cmo -c increment.ml
+ocamlc -g -annot -I ../../frontc/frontc -I ../xml-light -o covariance.cmo -c covariance.ml
+ocamlc -g -annot -I ../../frontc/frontc -I ../xml-light -o cextraireboucle.cmo -c cextraireboucle.ml
+ocamlc -g -annot -I ../../frontc/frontc -I ../xml-light -o tMap.cmo -c tMap.ml
+ocamlc -g -annot -I ../../frontc/frontc -I ../xml-light -o maxima.cmo -c maxima.ml
+ocamlc -g -annot -I ../../frontc/frontc -I ../xml-light -o balance.cmo -c balance.ml
+ocamlc -g -annot -I ../../frontc/frontc -I ../xml-light -o flowfacts.cmo -c flowfacts.ml
+ocamlc -g -annot -I ../../frontc/frontc -I ../xml-light -o inputFacts.cmo -c inputFacts.ml
+ocamlc -g -annot -I ../../frontc/frontc -I ../xml-light -o wcee.cmo -c wcee.ml
+ocamlc -g -annot -I ../../frontc/frontc -I ../xml-light -o orange.cmo -c orange.ml
+conditionAnalysis.ml cexptostr.ml cvariables.ml constante.ml coutput.ml rename.ml util.ml extractinfoPtr.ml cvarabs.ml interval.ml increment.ml covariance.ml cextraireboucle.ml tMap.ml maxima.ml flowfacts.ml balance.ml inputFacts.ml wcee.ml orange.ml
+conditionAnalysis.cmo cexptostr.cmo cvariables.cmo constante.cmo coutput.cmo rename.cmo util.cmo extractinfoPtr.cmo cvarabs.cmo interval.cmo increment.cmo covariance.cmo cextraireboucle.cmo tMap.cmo maxima.cmo flowfacts.cmo balance.cmo inputFacts.cmo wcee.cmo orange.cmo
+ocamlc  -g unix.cma ../../frontc/frontc/frontc.cma ../xml-light/xml-light.cma -o orange conditionAnalysis.cmo cexptostr.cmo cvariables.cmo constante.cmo coutput.cmo rename.cmo util.cmo extractinfoPtr.cmo cvarabs.cmo interval.cmo increment.cmo covariance.cmo cextraireboucle.cmo tMap.cmo maxima.cmo flowfacts.cmo balance.cmo inputFacts.cmo wcee.cmo orange.cmo 
+ocamlc -a  -o orange.cma conditionAnalysis.cmo cexptostr.cmo cvariables.cmo constante.cmo coutput.cmo rename.cmo util.cmo extractinfoPtr.cmo cvarabs.cmo interval.cmo increment.cmo covariance.cmo cextraireboucle.cmo tMap.cmo maxima.cmo flowfacts.cmo balance.cmo inputFacts.cmo wcee.cmo orange.cmo 
+ocamlopt -I ../../frontc/frontc -I ../xml-light -o conditionAnalysis.cmx -c conditionAnalysis.ml
+ocamlopt -I ../../frontc/frontc -I ../xml-light -o cexptostr.cmx -c cexptostr.ml
+ocamlopt -I ../../frontc/frontc -I ../xml-light -o cvariables.cmx -c cvariables.ml
+ocamlopt -I ../../frontc/frontc -I ../xml-light -o constante.cmx -c constante.ml
+ocamlopt -I ../../frontc/frontc -I ../xml-light -o coutput.cmx -c coutput.ml
+ocamlopt -I ../../frontc/frontc -I ../xml-light -o rename.cmx -c rename.ml
+ocamlopt -I ../../frontc/frontc -I ../xml-light -o util.cmx -c util.ml
+ocamlopt -I ../../frontc/frontc -I ../xml-light -o extractinfoPtr.cmx -c extractinfoPtr.ml
+ocamlopt -I ../../frontc/frontc -I ../xml-light -o cvarabs.cmx -c cvarabs.ml
+ocamlopt -I ../../frontc/frontc -I ../xml-light -o interval.cmx -c interval.ml
+ocamlopt -I ../../frontc/frontc -I ../xml-light -o increment.cmx -c increment.ml
+ocamlopt -I ../../frontc/frontc -I ../xml-light -o covariance.cmx -c covariance.ml
+ocamlopt -I ../../frontc/frontc -I ../xml-light -o cextraireboucle.cmx -c cextraireboucle.ml
+ocamlopt -I ../../frontc/frontc -I ../xml-light -o tMap.cmx -c tMap.ml
+ocamlopt -I ../../frontc/frontc -I ../xml-light -o maxima.cmx -c maxima.ml
+ocamlopt -I ../../frontc/frontc -I ../xml-light -o balance.cmx -c balance.ml
+ocamlopt -I ../../frontc/frontc -I ../xml-light -o flowfacts.cmx -c flowfacts.ml
+ocamlopt -I ../../frontc/frontc -I ../xml-light -o inputFacts.cmx -c inputFacts.ml
+ocamlopt -I ../../frontc/frontc -I ../xml-light -o wcee.cmx -c wcee.ml
+ocamlopt -I ../../frontc/frontc -I ../xml-light -o orange.cmx -c orange.ml
+ocamlopt -a  -o orange.cmxa conditionAnalysis.cmx cexptostr.cmx cvariables.cmx constante.cmx coutput.cmx rename.cmx util.cmx extractinfoPtr.cmx cvarabs.cmx interval.cmx increment.cmx covariance.cmx cextraireboucle.cmx tMap.cmx maxima.cmx flowfacts.cmx balance.cmx inputFacts.cmx wcee.cmx orange.cmx 
+make[1]: Leaving directory '/tmp/tmpfqc3tr-sis/orange/O_Range'
+make[1]: Entering directory '/tmp/tmpfqc3tr-sis/orange/graph'
+ocamlc -g -annot -I ../../frontc/frontc -I ../xml-light -I ../O_Range -I ../inst/lib/ -o tod.cmo -c tod.ml
+ocamlc -g -annot -I ../../frontc/frontc -I ../xml-light -I ../O_Range -I ../inst/lib/ -o resumeforgraph.cmo -c resumeforgraph.ml
+tod.ml resumeforgraph.ml
+tod.cmo resumeforgraph.cmo
+ocamlc  -g unix.cma ../../frontc/frontc/frontc.cma ../xml-light/xml-light.cma ../O_Range/orange.cma -o resumeforgraph tod.cmo resumeforgraph.cmo 
+ocamlc -a  -o resumeforgraph.cma tod.cmo resumeforgraph.cmo 
+ocamlopt -I ../../frontc/frontc -I ../xml-light -I ../O_Range -I ../inst/lib/ -o tod.cmx -c tod.ml
+ocamlopt -I ../../frontc/frontc -I ../xml-light -I ../O_Range -I ../inst/lib/ -o resumeforgraph.cmx -c resumeforgraph.ml
+ocamlopt -a  -o resumeforgraph.cmxa tod.cmx resumeforgraph.cmx 
+make[1]: Leaving directory '/tmp/tmpfqc3tr-sis/orange/graph'
+make[1]: Entering directory '/tmp/tmpfqc3tr-sis/orange/main'
+/bin/sh: line 1: hg: command not found
+echo "let version=\"\\n!!VERSION= (20210608)!!\\n\"" > version.ml
+ocamlc -annot -I ../../frontc/frontc -I ../xml-light -I ../O_Range -I ../inst/lib/ -I ../graph -o parsepragma.cmi -c parsepragma.ml
+ocamlopt -I ../../frontc/frontc -I ../xml-light -I ../O_Range -I ../inst/lib/ -I ../graph -o parsepragma.cmx -c parsepragma.ml
+ocamlc -annot -I ../../frontc/frontc -I ../xml-light -I ../O_Range -I ../inst/lib/ -I ../graph -o main.cmi -c main.ml
+ocamlopt -I ../../frontc/frontc -I ../xml-light -I ../O_Range -I ../inst/lib/ -I ../graph -o main.cmx -c main.ml
+ocamlc -annot -I ../../frontc/frontc -I ../xml-light -I ../O_Range -I ../inst/lib/ -I ../graph -o version.cmi -c version.ml
+ocamlopt -I ../../frontc/frontc -I ../xml-light -I ../O_Range -I ../inst/lib/ -I ../graph -o version.cmx -c version.ml
+ocamlopt  unix.cmxa str.cmxa ../../frontc/frontc/frontc.cmxa ../xml-light/xml-light.cmxa ../O_Range/orange.cmxa ../graph/resumeforgraph.cmxa -o orange parsepragma.cmx main.cmx version.cmx 
+make[1]: Leaving directory '/tmp/tmpfqc3tr-sis/orange/main'
+
+Installing orange: make install PREFIX='/home/mali54/OCaml-Work/OTAWA/ex-computation' ONLY_APP=1
+make[1]: Entering directory '/tmp/tmpfqc3tr-sis/orange/xml-light'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/tmp/tmpfqc3tr-sis/orange/xml-light'
+make[1]: Entering directory '/tmp/tmpfqc3tr-sis/orange/O_Range'
+make[1]: Leaving directory '/tmp/tmpfqc3tr-sis/orange/O_Range'
+make[1]: Entering directory '/tmp/tmpfqc3tr-sis/orange/graph'
+make[1]: Leaving directory '/tmp/tmpfqc3tr-sis/orange/graph'
+make[1]: Entering directory '/tmp/tmpfqc3tr-sis/orange/main'
+make[1]: Leaving directory '/tmp/tmpfqc3tr-sis/orange/main'
+make[1]: Entering directory '/tmp/tmpfqc3tr-sis/orange/xml-light'
+make[1]: Nothing to be done for 'install'.
+make[1]: Leaving directory '/tmp/tmpfqc3tr-sis/orange/xml-light'
+make[1]: Entering directory '/tmp/tmpfqc3tr-sis/orange/O_Range'
+make[1]: Leaving directory '/tmp/tmpfqc3tr-sis/orange/O_Range'
+make[1]: Entering directory '/tmp/tmpfqc3tr-sis/orange/graph'
+make[1]: Leaving directory '/tmp/tmpfqc3tr-sis/orange/graph'
+make[1]: Entering directory '/tmp/tmpfqc3tr-sis/orange/main'
+install orange /home/mali54/OCaml-Work/OTAWA/ex-computation/bin
+make[1]: Leaving directory '/tmp/tmpfqc3tr-sis/orange/main'

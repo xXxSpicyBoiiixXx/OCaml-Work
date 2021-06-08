@@ -1,0 +1,501 @@
+=== created by sis-install.py V1.0 (2021-05-21 01:11:31.397060) ===
+
+
+Dowloading gliss2: git clone https://git.renater.fr/anonscm/git/gliss2/gliss2.git /tmp/tmpWpwl67-sis/gliss2Cloning into '/tmp/tmpWpwl67-sis/gliss2'...
+
+Building gliss2: make 
+make[1]: Entering directory '/tmp/tmpWpwl67-sis/gliss2/irg'
+echo "let install_dir = \"/usr\"" > config.ml
+echo "let source_dir = \"/tmp/tmpWpwl67-sis/gliss2/irg/..\"" >> config.ml
+echo "let version = \"2.3\"" >> config.ml
+if [ 411 -ge 403 ]; then \
+	echo "let lowercase = String.lowercase_ascii" >> config.ml; \
+	echo "let uppercase = String.uppercase_ascii" >> config.ml; \
+	echo "let char_lowercase = Char.lowercase_ascii" >> config.ml; \
+	echo "let char_uppercase = Char.uppercase_ascii" >> config.ml; \
+else \
+	echo "let lowercase = String.lowercase" >> config.ml; \
+	echo "let uppercase = String.uppercase" >> config.ml; \
+	echo "let char_lowercase = Char.lowercase" >> config.ml; \
+	echo "let char_uppercase = Char.uppercase" >> config.ml; \
+fi
+ocamllex  -o lexer.ml lexer.mll
+98 states, 700 transitions, table size 3388 bytes
+ocamlyacc -v parser.mly
+1 rule never reduced
+23 reduce/reduce conflicts.
+ocamlc -g  -o config.cmo -c config.ml
+ocamlc -g  -o IdMaker.cmo -c IdMaker.ml
+ocamlc -g  -o irg.cmo -c irg.ml
+ocamlc -g  -o irgio.cmo -c irgio.ml
+ocamlc -g  -o instantiate.cmo -c instantiate.ml
+ocamlc -g  -o parser.cmi -c parser.mli
+ocamlc -g  -o lexer.cmo -c lexer.ml
+ocamlc -g  -o sem.cmo -c sem.ml
+ocamlc -g  -o iter.cmo -c iter.ml
+ocamlc -g  -o parser.cmo -c parser.ml
+ocamlc -g  -o irgUtil.cmo -c irgUtil.ml
+ocamlc -a   -o irg.cma config.cmo IdMaker.cmo irg.cmo irgio.cmo instantiate.cmo lexer.cmo sem.cmo iter.cmo parser.cmo irgUtil.cmo 
+ocamlc -g  -o print_irg.cmo -c print_irg.ml
+ocamlc   unix.cma str.cma irg.cma -g -o print_irg print_irg.cmo 
+ocamlc -g  -o mkirg.cmo -c mkirg.ml
+ocamlc   unix.cma str.cma irg.cma -g -o mkirg mkirg.cmo 
+ocamlc -g  -o gliss_tree.cmo -c gliss_tree.ml
+ocamlc   unix.cma str.cma irg.cma -g -o gliss-tree gliss_tree.cmo 
+make[1]: Leaving directory '/tmp/tmpWpwl67-sis/gliss2/irg'
+make[1]: Entering directory '/tmp/tmpWpwl67-sis/gliss2/optirg'
+ocamllex  -o formatlexer.ml formatlexer.mll
+27 states, 361 transitions, table size 1606 bytes
+ocamlc -g -I ../irg -o formatlexer.cmo -c formatlexer.ml
+ocamlc -g -I ../irg -o string_of_expr.cmo -c string_of_expr.ml
+ocamlc -g -I ../irg -o image_attr_size.cmo -c image_attr_size.ml
+ocamlc -g -I ../irg -o sw_fun.cmo -c sw_fun.ml
+ocamlc -g -I ../irg -o irgp.cmo -c irgp.ml
+ocamlc -g -I ../irg -o canon.cmo -c canon.ml
+ocamlc -g -I ../irg -o node_classes.cmo -c node_classes.ml
+ocamlc -g -I ../irg -o classfusion.cmo -c classfusion.ml
+ocamlc -g -I ../irg -o optirg.cmo -c optirg.ml
+ocamlc -a   -o liboptirg.cma formatlexer.cmo string_of_expr.cmo image_attr_size.cmo sw_fun.cmo irgp.cmo canon.cmo node_classes.cmo classfusion.cmo optirg.cmo 
+ocamlc -g -I ../irg -o main.cmo -c main.ml
+ocamlc   unix.cma str.cma ../irg/irg.cma liboptirg.cma -g -I ../irg -o optirg main.cmo 
+make[1]: Leaving directory '/tmp/tmpWpwl67-sis/gliss2/optirg'
+make[1]: Entering directory '/tmp/tmpWpwl67-sis/gliss2/gep'
+ocamllex  -o templater.ml templater.mll
+182 states, 565 transitions, table size 3352 bytes
+2620 additional bytes used for bindings
+ocamlc -g -I ../irg -I ../optirg -o bitmask.cmo -c bitmask.ml
+ocamlc -g -I ../irg -I ../optirg -o opti.cmo -c opti.ml
+ocamlc -g -I ../irg -I ../optirg -o toc.cmo -c toc.ml
+ocamlc -g -I ../irg -I ../optirg -o templater.cmo -c templater.ml
+ocamlc -g -I ../irg -I ../optirg -o app.cmo -c app.ml
+ocamlc -g -I ../irg -I ../optirg -o profile.cmo -c profile.ml
+ocamlc -g -I ../irg -I ../optirg -o decode_arg.cmo -c decode_arg.ml
+ocamlc -g -I ../irg -I ../optirg -o bits.cmo -c bits.ml
+ocamlc -g -I ../irg -I ../optirg -o stot.cmo -c stot.ml
+ocamlc -g -I ../irg -I ../optirg -o pqmc.cmo -c pqmc.ml
+ocamlc -a   -o libgep.cma bitmask.cmo opti.cmo toc.cmo templater.cmo app.cmo profile.cmo decode_arg.cmo bits.cmo stot.cmo pqmc.cmo 
+ocamlc -g -I ../irg -I ../optirg -o fetch.cmo -c fetch.ml
+ocamlc -g -I ../irg -I ../optirg -o decode.cmo -c decode.ml
+ocamlc -g -I ../irg -I ../optirg -o gep.cmo -c gep.ml
+ocamlc   str.cma unix.cma ../irg/irg.cma ../optirg/liboptirg.cma ../gep/libgep.cma -g -o gep fetch.cmo decode.cmo gep.cmo 
+ocamlc -g -I ../irg -I ../optirg -o disasm.cmo -c disasm.ml
+ocamlc   str.cma unix.cma ../irg/irg.cma ../optirg/liboptirg.cma libgep.cma -g -o gliss-disasm disasm.cmo 
+ocamlc -g -I ../irg -I ../optirg -o gliss_attr.cmo -c gliss_attr.ml
+ocamlc   str.cma unix.cma ../irg/irg.cma ../optirg/liboptirg.cma libgep.cma -g -o gliss-attr gliss_attr.cmo 
+ocamlc -g -I ../irg -I ../optirg -o gliss_used_regs.cmo -c gliss_used_regs.ml
+ocamlc   str.cma unix.cma ../irg/irg.cma ../optirg/liboptirg.cma libgep.cma -g -o gliss-used-regs gliss_used_regs.cmo 
+make[1]: Leaving directory '/tmp/tmpWpwl67-sis/gliss2/gep'
+cwd set to /tmp/tmpWpwl67-sis/lp_solve5
+executing (cd lpsolve55; sh ccc.linux)
+../shared/commonlib.c: In function ‘timeNow’:
+../shared/commonlib.c:705:3: warning: ‘ftime’ is deprecated: Use gettimeofday or clock_gettime instead [-Wdeprecated-declarations]
+  705 |   ftime(&buf);
+      |   ^~~~~
+In file included from ../shared/commonlib.c:7:
+/usr/include/sys/timeb.h:29:12: note: declared here
+   29 | extern int ftime (struct timeb *__timebuf)
+      |            ^~~~~
+ar: creating liblpsolve55.a
+a - lp_MDO.o
+a - commonlib.o
+a - mmio.o
+a - myblas.o
+a - ini.o
+a - fortify.o
+a - colamd.o
+a - lp_rlp.o
+a - lp_crash.o
+a - lp_LUSOL.o
+a - lusol.o
+a - lp_Hash.o
+a - lp_lib.o
+a - lp_wlp.o
+a - lp_matrix.o
+a - lp_mipbb.o
+a - lp_MPS.o
+a - lp_params.o
+a - lp_presolve.o
+a - lp_price.o
+a - lp_pricePSE.o
+a - lp_report.o
+a - lp_scale.o
+a - lp_simplex.o
+a - lp_SOS.o
+a - lp_utils.o
+a - yacc_read.o
+
+Dowloading armv7t: git clone https://git.renater.fr/anonscm/git/gliss2/armv7t.git /tmp/tmpWpwl67-sis/armv7tCloning into '/tmp/tmpWpwl67-sis/armv7t'...
+
+Building armv7t: make WITH_FAST_STATE=1 WITH_DYNLIB=1
+cp config.mk.in config.mk
+echo "Created config.mk. Edit it for configuration."
+Created config.mk. Edit it for configuration.
+cp nmp/state-fast.nmp nmp/state.nmp  
+cd nmp &&  ../../gliss2/irg/mkirg arm-thumb.nmp ../arm.irg  && cd ..
+backslash and newline separated by space
+nmp2nml succeeded, 13399 line(s) parsed, 46549 line(s) written, 3062 macro substitution(s) done !
+WARNING: dataProcessing.nmp:497:56: first bound (7) is bigger than base size (4)
+WARNING: dataProcessing.nmp:497:104: first bound (7) is bigger than base size (4)
+WARNING: thumb.nmp:154:24: the canonical function //do_collect_regs is not defined
+WARNING: thumb2.nmp:3915:56: first bound (7) is bigger than base size (3)
+WARNING: thumb2.nmp:3915:104: first bound (7) is bigger than base size (3)
+WARNING: thumb2.nmp:3942:56: first bound (7) is bigger than base size (4)
+WARNING: thumb2.nmp:3942:104: first bound (7) is bigger than base size (4)
+../gliss2/gep/gep -m loader:old_elf -m code:code -m env:void_env -m sys_call:extern/sys_call -m shift:extern/shift -v -a disasm.c -S -switch -D -m mem:io_mem -a used_regs.c -a disasm.c arm.irg
+creating "include/"
+creating "include"
+creating "/tmp/tmpWpwl67-sis/armv7t/include/arm"
+creating "/tmp/tmpWpwl67-sis/armv7t/include/arm"
+creating "include/arm/id.h"
+creating "include/arm/api.h"
+creating "include/arm/debug.h"
+creating "include/arm/macros.h"
+creating "src/"
+creating "src"
+creating "src/arm-config"
+creating "src/api.c"
+creating "src/Makefile"
+creating "src/debug.c"
+creating "src/platform.h"
+creating "src/fetch_table.h"
+creating "include/arm/fetch.h"
+creating "src/fetch.c"
+creating "src/decode_table.h"
+creating "include/arm/decode.h"
+creating "src/decode.c"
+creating "src/code_table.h"
+creating "/tmp/tmpWpwl67-sis/armv7t/src/mem.c"
+creating "/tmp/tmpWpwl67-sis/armv7t/include/arm/mem.h"
+creating "/tmp/tmpWpwl67-sis/armv7t/src/grt.c"
+creating "/tmp/tmpWpwl67-sis/armv7t/include/arm/grt.h"
+creating "/tmp/tmpWpwl67-sis/armv7t/src/error.c"
+creating "/tmp/tmpWpwl67-sis/armv7t/include/arm/error.h"
+creating "/tmp/tmpWpwl67-sis/armv7t/src/gen_int.c"
+creating "/tmp/tmpWpwl67-sis/armv7t/include/arm/gen_int.h"
+creating "/tmp/tmpWpwl67-sis/armv7t/src/loader.c"
+creating "/tmp/tmpWpwl67-sis/armv7t/include/arm/loader.h"
+creating "/tmp/tmpWpwl67-sis/armv7t/src/code.c"
+creating "/tmp/tmpWpwl67-sis/armv7t/include/arm/code.h"
+creating "/tmp/tmpWpwl67-sis/armv7t/src/env.c"
+creating "/tmp/tmpWpwl67-sis/armv7t/include/arm/env.h"
+creating "/tmp/tmpWpwl67-sis/armv7t/src/sys_call.c"
+creating "/tmp/tmpWpwl67-sis/armv7t/include/arm/sys_call.h"
+creating "/tmp/tmpWpwl67-sis/armv7t/src/shift.c"
+creating "/tmp/tmpWpwl67-sis/armv7t/include/arm/shift.h"
+creating "sim"
+test -d src || mkdir src
+cp config.tpl include/arm/config.h
+echo "#define ARM_THUMB" >> include/arm/config.h
+echo "#define ARM_THUMB_1" >> include/arm/config.h
+../gliss2/gep/gliss-used-regs arm.irg -e nmp/used_regs.nmp
+nmp2nml succeeded, 749 line(s) parsed, 869 line(s) written, 126 macro substitution(s) done !
+WARNING: nmp/used_regs.nmp:38:47: the canonical function read is not defined
+WARNING: nmp/used_regs.nmp:41:40: the canonical function write is not defined
+WARNING: nmp/used_regs.nmp:274:16: the canonical function count is not defined
+../gliss2/gep/gliss-disasm arm.irg -o src/disasm.c -c
+creating "src/disasm.c"
+creating "disasm"
+(cd src; make WITH_DYNLIB=1)
+make[1]: Entering directory '/tmp/tmpWpwl67-sis/armv7t/src'
+cc -g3 -O3 -I../include -fPIC   -c -o api.o api.c
+cc -g3 -O3 -I../include -fPIC   -c -o fetch.o fetch.c
+cc -g3 -O3 -I../include -fPIC   -c -o decode.o decode.c
+cc -g3 -O3 -I../include -fPIC   -c -o debug.o debug.c
+cc -g3 -O3 -I../include -fPIC   -c -o mem.o mem.c
+cc -g3 -O3 -I../include -fPIC   -c -o grt.o grt.c
+cc -g3 -O3 -I../include -fPIC   -c -o error.o error.c
+cc -g3 -O3 -I../include -fPIC   -c -o gen_int.o gen_int.c
+cc -g3 -O3 -I../include -fPIC   -c -o loader.o loader.c
+cc -g3 -O3 -I../include -fPIC   -c -o code.o code.c
+In file included from code_table.h:19,
+                 from code.c:10:
+code_table.h: In function ‘arm_instr_STRTS_S___LT_S_RT__code’:
+../include/arm/grt.h:158:30: warning: right shift count >= width of type [-Wshift-count-overflow]
+  158 | #define arm_bit(v, b)  (((v) >> (b)) & 0x1)
+      |                              ^~
+../include/arm/grt.h:127:73: note: in definition of macro ‘arm_set_field32’
+  127 | #define arm_set_field32( v, s, u, l)  ((int32_t) arm_set_field32u((v), (s), (u), (l)))
+      |                                                                         ^
+../include/arm/grt.h:163:25: note: in expansion of macro ‘arm_bit’
+  163 | #define arm_bit32(v, b) arm_bit(v, b)
+      |                         ^~~~~~~
+code_table.h:1295:55: note: in expansion of macro ‘arm_bit32’
+ 1295 |       ARM_APSR = arm_set_field32(ARM_APSR, ((uint8_t)(arm_bit32(ARM_GPR[0], (32 - 0)))), 29, 29);
+      |                                                       ^~~~~~~~~
+../include/arm/grt.h:158:30: warning: right shift count is negative [-Wshift-count-negative]
+  158 | #define arm_bit(v, b)  (((v) >> (b)) & 0x1)
+      |                              ^~
+../include/arm/grt.h:127:73: note: in definition of macro ‘arm_set_field32’
+  127 | #define arm_set_field32( v, s, u, l)  ((int32_t) arm_set_field32u((v), (s), (u), (l)))
+      |                                                                         ^
+../include/arm/grt.h:163:25: note: in expansion of macro ‘arm_bit’
+  163 | #define arm_bit32(v, b) arm_bit(v, b)
+      |                         ^~~~~~~
+code_table.h:1299:55: note: in expansion of macro ‘arm_bit32’
+ 1299 |       ARM_APSR = arm_set_field32(ARM_APSR, ((uint8_t)(arm_bit32(ARM_GPR[0], (0 - 1)))), 29, 29);
+      |                                                       ^~~~~~~~~
+../include/arm/grt.h:158:30: warning: right shift count is negative [-Wshift-count-negative]
+  158 | #define arm_bit(v, b)  (((v) >> (b)) & 0x1)
+      |                              ^~
+../include/arm/grt.h:127:73: note: in definition of macro ‘arm_set_field32’
+  127 | #define arm_set_field32( v, s, u, l)  ((int32_t) arm_set_field32u((v), (s), (u), (l)))
+      |                                                                         ^
+../include/arm/grt.h:163:25: note: in expansion of macro ‘arm_bit’
+  163 | #define arm_bit32(v, b) arm_bit(v, b)
+      |                         ^~~~~~~
+code_table.h:1303:55: note: in expansion of macro ‘arm_bit32’
+ 1303 |       ARM_APSR = arm_set_field32(ARM_APSR, ((uint8_t)(arm_bit32(ARM_GPR[0], (0 - 1)))), 29, 29);
+      |                                                       ^~~~~~~~~
+code_table.h: In function ‘arm_instr_STRBTS_S___LT_S_RT__code’:
+../include/arm/grt.h:158:30: warning: right shift count >= width of type [-Wshift-count-overflow]
+  158 | #define arm_bit(v, b)  (((v) >> (b)) & 0x1)
+      |                              ^~
+../include/arm/grt.h:127:73: note: in definition of macro ‘arm_set_field32’
+  127 | #define arm_set_field32( v, s, u, l)  ((int32_t) arm_set_field32u((v), (s), (u), (l)))
+      |                                                                         ^
+../include/arm/grt.h:163:25: note: in expansion of macro ‘arm_bit’
+  163 | #define arm_bit32(v, b) arm_bit(v, b)
+      |                         ^~~~~~~
+code_table.h:5361:55: note: in expansion of macro ‘arm_bit32’
+ 5361 |       ARM_APSR = arm_set_field32(ARM_APSR, ((uint8_t)(arm_bit32(ARM_GPR[0], (32 - 0)))), 29, 29);
+      |                                                       ^~~~~~~~~
+../include/arm/grt.h:158:30: warning: right shift count is negative [-Wshift-count-negative]
+  158 | #define arm_bit(v, b)  (((v) >> (b)) & 0x1)
+      |                              ^~
+../include/arm/grt.h:127:73: note: in definition of macro ‘arm_set_field32’
+  127 | #define arm_set_field32( v, s, u, l)  ((int32_t) arm_set_field32u((v), (s), (u), (l)))
+      |                                                                         ^
+../include/arm/grt.h:163:25: note: in expansion of macro ‘arm_bit’
+  163 | #define arm_bit32(v, b) arm_bit(v, b)
+      |                         ^~~~~~~
+code_table.h:5365:55: note: in expansion of macro ‘arm_bit32’
+ 5365 |       ARM_APSR = arm_set_field32(ARM_APSR, ((uint8_t)(arm_bit32(ARM_GPR[0], (0 - 1)))), 29, 29);
+      |                                                       ^~~~~~~~~
+../include/arm/grt.h:158:30: warning: right shift count is negative [-Wshift-count-negative]
+  158 | #define arm_bit(v, b)  (((v) >> (b)) & 0x1)
+      |                              ^~
+../include/arm/grt.h:127:73: note: in definition of macro ‘arm_set_field32’
+  127 | #define arm_set_field32( v, s, u, l)  ((int32_t) arm_set_field32u((v), (s), (u), (l)))
+      |                                                                         ^
+../include/arm/grt.h:163:25: note: in expansion of macro ‘arm_bit’
+  163 | #define arm_bit32(v, b) arm_bit(v, b)
+      |                         ^~~~~~~
+code_table.h:5369:55: note: in expansion of macro ‘arm_bit32’
+ 5369 |       ARM_APSR = arm_set_field32(ARM_APSR, ((uint8_t)(arm_bit32(ARM_GPR[0], (0 - 1)))), 29, 29);
+      |                                                       ^~~~~~~~~
+code_table.h: In function ‘arm_instr_LDRTS_S___LT_S_RT__code’:
+../include/arm/grt.h:158:30: warning: right shift count >= width of type [-Wshift-count-overflow]
+  158 | #define arm_bit(v, b)  (((v) >> (b)) & 0x1)
+      |                              ^~
+../include/arm/grt.h:127:73: note: in definition of macro ‘arm_set_field32’
+  127 | #define arm_set_field32( v, s, u, l)  ((int32_t) arm_set_field32u((v), (s), (u), (l)))
+      |                                                                         ^
+../include/arm/grt.h:163:25: note: in expansion of macro ‘arm_bit’
+  163 | #define arm_bit32(v, b) arm_bit(v, b)
+      |                         ^~~~~~~
+code_table.h:7118:55: note: in expansion of macro ‘arm_bit32’
+ 7118 |       ARM_APSR = arm_set_field32(ARM_APSR, ((uint8_t)(arm_bit32(ARM_GPR[0], (32 - 0)))), 29, 29);
+      |                                                       ^~~~~~~~~
+../include/arm/grt.h:158:30: warning: right shift count is negative [-Wshift-count-negative]
+  158 | #define arm_bit(v, b)  (((v) >> (b)) & 0x1)
+      |                              ^~
+../include/arm/grt.h:127:73: note: in definition of macro ‘arm_set_field32’
+  127 | #define arm_set_field32( v, s, u, l)  ((int32_t) arm_set_field32u((v), (s), (u), (l)))
+      |                                                                         ^
+../include/arm/grt.h:163:25: note: in expansion of macro ‘arm_bit’
+  163 | #define arm_bit32(v, b) arm_bit(v, b)
+      |                         ^~~~~~~
+code_table.h:7122:55: note: in expansion of macro ‘arm_bit32’
+ 7122 |       ARM_APSR = arm_set_field32(ARM_APSR, ((uint8_t)(arm_bit32(ARM_GPR[0], (0 - 1)))), 29, 29);
+      |                                                       ^~~~~~~~~
+../include/arm/grt.h:158:30: warning: right shift count is negative [-Wshift-count-negative]
+  158 | #define arm_bit(v, b)  (((v) >> (b)) & 0x1)
+      |                              ^~
+../include/arm/grt.h:127:73: note: in definition of macro ‘arm_set_field32’
+  127 | #define arm_set_field32( v, s, u, l)  ((int32_t) arm_set_field32u((v), (s), (u), (l)))
+      |                                                                         ^
+../include/arm/grt.h:163:25: note: in expansion of macro ‘arm_bit’
+  163 | #define arm_bit32(v, b) arm_bit(v, b)
+      |                         ^~~~~~~
+code_table.h:7126:55: note: in expansion of macro ‘arm_bit32’
+ 7126 |       ARM_APSR = arm_set_field32(ARM_APSR, ((uint8_t)(arm_bit32(ARM_GPR[0], (0 - 1)))), 29, 29);
+      |                                                       ^~~~~~~~~
+code_table.h: In function ‘arm_instr_LDRBTS_S___LT_S_RT__code’:
+../include/arm/grt.h:158:30: warning: right shift count >= width of type [-Wshift-count-overflow]
+  158 | #define arm_bit(v, b)  (((v) >> (b)) & 0x1)
+      |                              ^~
+../include/arm/grt.h:127:73: note: in definition of macro ‘arm_set_field32’
+  127 | #define arm_set_field32( v, s, u, l)  ((int32_t) arm_set_field32u((v), (s), (u), (l)))
+      |                                                                         ^
+../include/arm/grt.h:163:25: note: in expansion of macro ‘arm_bit’
+  163 | #define arm_bit32(v, b) arm_bit(v, b)
+      |                         ^~~~~~~
+code_table.h:14039:55: note: in expansion of macro ‘arm_bit32’
+14039 |       ARM_APSR = arm_set_field32(ARM_APSR, ((uint8_t)(arm_bit32(ARM_GPR[0], (32 - 0)))), 29, 29);
+      |                                                       ^~~~~~~~~
+../include/arm/grt.h:158:30: warning: right shift count is negative [-Wshift-count-negative]
+  158 | #define arm_bit(v, b)  (((v) >> (b)) & 0x1)
+      |                              ^~
+../include/arm/grt.h:127:73: note: in definition of macro ‘arm_set_field32’
+  127 | #define arm_set_field32( v, s, u, l)  ((int32_t) arm_set_field32u((v), (s), (u), (l)))
+      |                                                                         ^
+../include/arm/grt.h:163:25: note: in expansion of macro ‘arm_bit’
+  163 | #define arm_bit32(v, b) arm_bit(v, b)
+      |                         ^~~~~~~
+code_table.h:14043:55: note: in expansion of macro ‘arm_bit32’
+14043 |       ARM_APSR = arm_set_field32(ARM_APSR, ((uint8_t)(arm_bit32(ARM_GPR[0], (0 - 1)))), 29, 29);
+      |                                                       ^~~~~~~~~
+../include/arm/grt.h:158:30: warning: right shift count is negative [-Wshift-count-negative]
+  158 | #define arm_bit(v, b)  (((v) >> (b)) & 0x1)
+      |                              ^~
+../include/arm/grt.h:127:73: note: in definition of macro ‘arm_set_field32’
+  127 | #define arm_set_field32( v, s, u, l)  ((int32_t) arm_set_field32u((v), (s), (u), (l)))
+      |                                                                         ^
+../include/arm/grt.h:163:25: note: in expansion of macro ‘arm_bit’
+  163 | #define arm_bit32(v, b) arm_bit(v, b)
+      |                         ^~~~~~~
+code_table.h:14047:55: note: in expansion of macro ‘arm_bit32’
+14047 |       ARM_APSR = arm_set_field32(ARM_APSR, ((uint8_t)(arm_bit32(ARM_GPR[0], (0 - 1)))), 29, 29);
+      |                                                       ^~~~~~~~~
+cc -g3 -O3 -I../include -fPIC   -c -o env.o env.c
+cc -g3 -O3 -I../include -fPIC   -c -o sys_call.o sys_call.c
+cc -g3 -O3 -I../include -fPIC   -c -o shift.o shift.c
+cc -g3 -O3 -I../include -fPIC   -c -o disasm.o disasm.c
+cc -g3 -O3 -I../include -fPIC   -c -o used_regs.o used_regs.c
+ar rcsu libarm.a api.o fetch.o decode.o debug.o mem.o grt.o error.o gen_int.o loader.o code.o env.o sys_call.o shift.o disasm.o used_regs.o
+ar: `u' modifier ignored since `D' is the default (see `U')
+ranlib libarm.a
+make[1]: Leaving directory '/tmp/tmpWpwl67-sis/armv7t/src'
+cd disasm; make
+make[1]: Entering directory '/tmp/tmpWpwl67-sis/armv7t/disasm'
+cc -I../include -I../src -g -O3   -c -o arm-disasm.o arm-disasm.c
+cc -I../include -I../src -g -O3 -o arm-disasm arm-disasm.o -L/tmp/tmpWpwl67-sis/armv7t/src -larm         
+make[1]: Leaving directory '/tmp/tmpWpwl67-sis/armv7t/disasm'
+cd sim; make
+make[1]: Entering directory '/tmp/tmpWpwl67-sis/armv7t/sim'
+cc -I../include -I../src -g -O3   -c -o arm-sim.o arm-sim.c
+cc -I../include -I../src -g -O3 -o arm-sim arm-sim.o -L/tmp/tmpWpwl67-sis/armv7t/src -larm         
+make[1]: Leaving directory '/tmp/tmpWpwl67-sis/armv7t/sim'
+
+Dowloading otawa-arm: git clone https://git.renater.fr/anonscm/git/otawa/otawa-arm.git /tmp/tmpWpwl67-sis/otawa-armCloning into '/tmp/tmpWpwl67-sis/otawa-arm'...
+
+Setting up otawa-arm: cmake . -DOTAWA_CONFIG=/home/mali54/Downloads/bin/otawa-config
+CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+-- The C compiler identification is GNU 10.2.0
+-- The CXX compiler identification is GNU 10.2.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- ARM library found at /tmp/tmpWpwl67-sis/armv7t/src/libarm.a
+-- otawa-config found at /home/mali54/Downloads/bin/otawa-config
+-- C++ set using CMAKE_CXX_STANDARD
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /tmp/tmpWpwl67-sis/otawa-arm
+
+Building otawa-arm: make
+[ 12%] Generating otawa_target.h
+nmp2nml succeeded, 459 line(s) parsed, 500 line(s) written, 47 macro substitution(s) done !
+nmp2nml succeeded, 7 line(s) parsed, 7 line(s) written,  macro substitution(s) done !
+creating "/tmp/tmpWpwl67-sis/otawa-arm/otawa_target.h"
+WARNING: armv7t.nmp:128:39: first bound (15) is bigger than base size (13)
+WARNING: armv7t.nmp:128:39: second bound (15) is bigger than base size (13)
+WARNING: armv7t.nmp:139:26: first bound (15) is bigger than base size (13)
+WARNING: armv7t.nmp:139:26: second bound (15) is bigger than base size (13)
+[ 25%] Generating otawa_condition.h
+nmp2nml succeeded, 459 line(s) parsed, 500 line(s) written, 47 macro substitution(s) done !
+nmp2nml succeeded, 151 line(s) parsed, 119 line(s) written,  macro substitution(s) done !
+creating "/tmp/tmpWpwl67-sis/otawa-arm/otawa_condition.h"
+WARNING: armv7t.nmp:128:39: first bound (15) is bigger than base size (13)
+WARNING: armv7t.nmp:128:39: second bound (15) is bigger than base size (13)
+WARNING: armv7t.nmp:139:26: first bound (15) is bigger than base size (13)
+WARNING: armv7t.nmp:139:26: second bound (15) is bigger than base size (13)
+[ 37%] Generating otawa_kind.h
+nmp2nml succeeded, 459 line(s) parsed, 500 line(s) written, 47 macro substitution(s) done !
+nmp2nml succeeded, 388 line(s) parsed, 356 line(s) written,  macro substitution(s) done !
+creating "/tmp/tmpWpwl67-sis/otawa-arm/otawa_kind.h"
+WARNING: armv7t.nmp:128:39: first bound (15) is bigger than base size (13)
+WARNING: armv7t.nmp:128:39: second bound (15) is bigger than base size (13)
+WARNING: armv7t.nmp:139:26: first bound (15) is bigger than base size (13)
+WARNING: armv7t.nmp:139:26: second bound (15) is bigger than base size (13)
+[ 50%] Generating otawa_ksem.h
+nmp2nml succeeded, 459 line(s) parsed, 500 line(s) written, 47 macro substitution(s) done !
+nmp2nml succeeded, 871 line(s) parsed, 1437 line(s) written, 505 macro substitution(s) done !
+creating "/tmp/tmpWpwl67-sis/otawa-arm/otawa_ksem.h"
+WARNING: armv7t.nmp:128:39: first bound (15) is bigger than base size (13)
+WARNING: armv7t.nmp:128:39: second bound (15) is bigger than base size (13)
+WARNING: armv7t.nmp:139:26: first bound (15) is bigger than base size (13)
+WARNING: armv7t.nmp:139:26: second bound (15) is bigger than base size (13)
+[ 62%] Generating otawa_multi.h
+nmp2nml succeeded, 459 line(s) parsed, 500 line(s) written, 47 macro substitution(s) done !
+nmp2nml succeeded, 5 line(s) parsed, 5 line(s) written,  macro substitution(s) done !
+creating "/tmp/tmpWpwl67-sis/otawa-arm/otawa_multi.h"
+WARNING: armv7t.nmp:128:39: first bound (15) is bigger than base size (13)
+WARNING: armv7t.nmp:128:39: second bound (15) is bigger than base size (13)
+WARNING: armv7t.nmp:139:26: first bound (15) is bigger than base size (13)
+WARNING: armv7t.nmp:139:26: second bound (15) is bigger than base size (13)
+[ 75%] Generating otawa_sem.h
+nmp2nml succeeded, 459 line(s) parsed, 500 line(s) written, 47 macro substitution(s) done !
+nmp2nml succeeded, 1152 line(s) parsed, 2232 line(s) written, 719 macro substitution(s) done !
+creating "/tmp/tmpWpwl67-sis/otawa-arm/otawa_sem.h"
+WARNING: armv7t.nmp:128:39: first bound (15) is bigger than base size (13)
+WARNING: armv7t.nmp:128:39: second bound (15) is bigger than base size (13)
+WARNING: armv7t.nmp:139:26: first bound (15) is bigger than base size (13)
+WARNING: armv7t.nmp:139:26: second bound (15) is bigger than base size (13)
+[ 87%] Building CXX object CMakeFiles/arm.dir/arm.cpp.o
+[100%] Linking CXX shared library arm.so
+[100%] Built target arm
+
+Installing otawa-arm: make install
+
+Dowloading otawa-lp_solve5: git clone https://git.renater.fr/anonscm/git/otawa/otawa-lp_solve5.git /tmp/tmpWpwl67-sis/otawa-lp_solve5Cloning into '/tmp/tmpWpwl67-sis/otawa-lp_solve5'...
+
+Setting up otawa-lp_solve5: cmake . -DOTAWA_CONFIG=/home/mali54/Downloads/bin/otawa-config
+CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+-- The C compiler identification is GNU 10.2.0
+-- The CXX compiler identification is GNU 10.2.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- C++ set using CMAKE_CXX_STANDARD
+-- lp_solve5 library found at /tmp/tmpWpwl67-sis/lp_solve5/lpsolve55/liblpsolve55.a
+-- otawa-config found at /home/mali54/Downloads/bin/otawa-config
+-- OTAWA_LDFLAGS=-L/home/mali54/Downloads/lib -lotawa -lelm -lgel
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /tmp/tmpWpwl67-sis/otawa-lp_solve5
+
+Building otawa-lp_solve5: make
+[ 50%] Building CXX object CMakeFiles/lp_solve5.dir/lp_solve5.cpp.o
+[100%] Linking CXX shared library lp_solve5.so
+[100%] Built target lp_solve5
+
+Installing otawa-lp_solve5: make install
