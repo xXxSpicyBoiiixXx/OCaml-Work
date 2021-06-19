@@ -18,6 +18,6 @@
     <ignore-entry name="caml_call_gc" />
     <nocall address="0x10804" />
     <noreturn address = "0x10804" />
-  <ignorecontrol address="0x10804" />
+  <ignorecontrol address="0x107ce" />
 </flowfacts>
 
