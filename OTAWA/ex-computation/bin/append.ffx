@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <flowfacts>
+
+	<function name="camlAppend__entry">
+		
+	</function>
 	<function name="camlAppend__append_1010">
 		<noreturn address="0x2a1a8"/>
     <control-constraint><le><count id="block-1"/><const int="2"/></le></control-constraint>
