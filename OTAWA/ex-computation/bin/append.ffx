@@ -6,7 +6,7 @@
 	</function>
 	<function name="camlAppend__append_1010" executed = "true" extern = "false">
 		<block address = "107a4" />
-		<control-constraint><le><add><count id="block-1"/></add><const int="2"/></le></control-constraint>
+		<control-constraint><le><count id="block-IF1T"/><const int="2"/></le></control-constraint>
     </function>
   <ignorecontrol address="0x107ce" />
 </flowfacts>

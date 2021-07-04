@@ -1,0 +1,19 @@
+<flowfacts> 
+
+<function name = "f">
+
+<control-constrait><le><count id = "block-1" /><const int = "80"/></le></control-constraint>
+
+</function>
+
+</flowfacts>
+
+<flowfacts> 
+
+<function name = "main">
+
+<control-constrait><le><count id = "block-2" /><const int = "100" /></le>
+
+</function>
+
+</flowfacts>
